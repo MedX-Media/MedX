@@ -5,4 +5,3 @@ an open-source media platform for medical people to explore, learn, and share in
 we are working and will launch as soon as possible. you can watch our website at www.medxmedia.net
 
 
-this is an update from MedX admin's fork.
