@@ -1,6 +1,7 @@
 # MedX
 ## what it is?
-MedX is an open-source media platform for med people to explore, learn, and share in the world of health tech.
+MedX is an open-source media platform for med people to explore, learn, and share in the world of health tech.  
+this is our website www.medxmedia.net (launching soon)
 
 ## who we are?
 the first contributors are some medical people! @sinusealpha, @aref-asadi, and @hossein-kazzemi are those who started this project. but as it goes, other people can contribute to it to help us in our shared purpose -- medicalizing tech world for medical (and in a broader version, non-technical) people.
