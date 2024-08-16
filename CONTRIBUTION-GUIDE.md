@@ -1,5 +1,5 @@
 # contribution guide
-[persian version](https://docs.google.com/document/d/1MqN3kFYmRMHa3mB40iO6MYB1kc_zbUaMOvsouq6bRU0/edit?usp=sharing)
+[persian version | نسخه فارسی](https://docs.google.com/document/d/1MqN3kFYmRMHa3mB40iO6MYB1kc_zbUaMOvsouq6bRU0/edit?usp=sharing)
 
 hi. welcome to the contribution guide of medx open-source project.
 it's nice to have you here. and this is a guiding document aims to help the people who are willing to contribute to the medx open-source project. you can read about its why [here]() if you haven't read it yet.
