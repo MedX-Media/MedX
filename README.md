@@ -14,7 +14,7 @@ our vision is a world in which almost all medical people can explore, learn and 
 as we are an open startup, we issues almost anything we're working on. we also publish monthly reports in our [newsletter](https://medxmedia.substack.com/) and our [inside medx telegram channel](https://t.me/insidemedx).
 
 ## how can 'anyone' contribute?
-anyone can contribute directly and freely through this public repository. but before contribution, please read our [contributions guide](https://github.com/Sinusealpha/MedX/blob/main/CONTRIBUTION-GUIDE.md). we're also actively seeking same-purposed people (especially from those who contributed here) to be in our main team and if you see yourself as this person, please fill out this [form]() and we'll message you as soon as possible if there are/aren't any chance.
+anyone can contribute directly and freely through this public repository. if you're hesitating about contributing, read our [contributing why](https://github.com/Sinusealpha/MedX/blob/main/CONTRIBUTION-WHY.md) document. it's about the reasons you may have for contributing to open-source projects like medx. but before contributing, please read our [contributions guide](https://github.com/Sinusealpha/MedX/blob/main/CONTRIBUTION-GUIDE.md). we're also actively seeking same-purposed people (especially from those who contributed here) to be in our main team and if you see yourself as this person, please fill out this [form]() and we'll message you as soon as possible if there are/aren't any chance.
 
 
 
