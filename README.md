@@ -1,4 +1,6 @@
 # MedX
+under construction...
+
 ## what is MedX?
 MedX is an open-source media platform for med people to explore, learn, share, and contribute to the world of health tech.  
 ---> find our website at [www.medxmedia.net](https://www.medxmedia.net) (launching soon!)  
