@@ -7,3 +7,6 @@ it's nice to have you here. and this is a guiding document aims to help the peop
 first of all, you should know that we encourage any contribution. even if it doesn't meet this document. because we consider any contribution a help and help is good for its own sake. so this document is just for a bit better help for those who want to help more.
 
 we should also emphasis that this is an open-source project meaning that you can contribute to everything. even this document itself. so please never hesitate about "can i contribute to this part or not?".
+
+
+wait some days please, it's being completed...
