@@ -19,7 +19,7 @@ we should also emphasis that this is an open-source project meaning that you can
 all assigned individuals are responsible for an issue's completion and results. however, if multiple people are assigned, the person who created the issue and set the deadline has primary responsibility.
 
 ### where we can talk about issues?
-you can talk about them on their page. you can also talk about them in our developer community.
+you can talk about them on their page. you can also talk about them in our [developer communities](https://github.com/Sinusealpha/MedX/blob/main/COMMUNITY.md).
 
 ---
 
