@@ -22,9 +22,9 @@ an issue should be created when:
 
 
 ## what to consider when creating an issue?
-- assignee: Every issue must be assigned to a person. this could be yourself or another team member.
-- deadline: Set a clear deadline for each issue. Issues without deadlines will not be prioritized.
-- tags: apply at least one tag to every issue. use descriptive tags that accurately reflect the issue's nature.  
+- assignee: every issue must be assigned to a person. this could be yourself or another team member.
+- deadline: set a clear deadline for each issue. issues without deadlines will not be prioritized.
+- tags: apply at least one tag to every issue. use correct tags that accurately reflect the issue's nature.  
 for example:  
 ---> 'good first issue': suitable for new contributors.  
 ---> 'bug': reports a defect or error.  
@@ -33,6 +33,9 @@ for example:
 
 ## who is responsible for an issue?
 all assigned individuals are responsible for an issue's completion and results. however, if multiple people are assigned, the person who created the issue and set the deadline has primary responsibility.
+
+
+
 
 
 wait a few days please, it's being completed...
