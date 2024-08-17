@@ -24,7 +24,7 @@ an issue should be created when:
 ## what to consider when creating an issue?
 - assignee: Every issue must be assigned to a person. this could be yourself or another team member.
 - deadline: Set a clear deadline for each issue. Issues without deadlines will not be prioritized.
-- tags: apply at least one tag to every issue. use descriptive tags that accurately reflect the issue's nature.
+- tags: apply at least one tag to every issue. use descriptive tags that accurately reflect the issue's nature.  
 for example:  
 ---> 'good first issue': suitable for new contributors.  
 ---> 'bug': reports a defect or error.  
