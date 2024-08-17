@@ -8,20 +8,32 @@ first of all, you should know that we encourage any contribution. even if it doe
 
 we should also emphasis that this is an open-source project meaning that you can contribute to everything. even this document itself. so please never hesitate about "can i contribute to this part or not?".
 
+---
+
 # issues
 
-## when to create an issue?
+## general questions about issues
+### what are the issues? why do we need them?
+
+### who is responsible for an issue?
+all assigned individuals are responsible for an issue's completion and results. however, if multiple people are assigned, the person who created the issue and set the deadline has primary responsibility.
+
+### where we can talk about issues?
+you can talk about them on their page. you can also talk about them in our developer community.
+
+---
+
+## creating issues
+### when to create an issue?
 an issue should be created when:
 - you want to start working on something.
 - you identify something that needs to be worked on, either by yourself or others.
 
-
-## how to create an issue?
+### how to create an issue?
 1. navigate to the project's issues tab.
 2. click the "new issue" button.
 
-
-## what to consider when creating an issue?
+### what to consider when creating an issue?
 - assignee: every issue must be assigned at least to a person. this could be yourself or a team of people.
 - deadline: set a clear deadline for each issue. issues without deadlines should not even exist!
 - tags: apply at least one tag to every issue. use correct tags that accurately reflect the issue's nature.  
@@ -30,9 +42,8 @@ for example:
 ---> 'bug': reports a defect or error.  
 ---> 'enhancement': suggest a new feature or improvement.  
 
+---
 
-## who is responsible for an issue?
-all assigned individuals are responsible for an issue's completion and results. however, if multiple people are assigned, the person who created the issue and set the deadline has primary responsibility.
 
 
 
