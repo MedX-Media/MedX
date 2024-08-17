@@ -9,18 +9,31 @@ first of all, you should know that we encourage any contribution. even if it doe
 we should also emphasis that this is an open-source project meaning that you can contribute to everything. even this document itself. so please never hesitate about "can i contribute to this part or not?".
 
 # issues
-### when we create an issue?
-when we want to work on something, we create an issue. when we see that something needs to be worked on, by ourselves or by others, we create an issue too.
 
-### how to create an issue?
-go to the issues tab of the project and click on the 'new issue'. this is how you can create an issue. but care about the following principles:
-- assigns: every issue must be **assigned to a person**. so if you're creating an issue, make sure to assign it to a person. that person could be yourself too.
-- deadlines: make sure to determine the **deadline** for every issue. we don't consider it an issue to work on, even if it has a deadline.
-- tags: every issue should have **at least one tag**. tags are clear and use them correctly. for example, if that issue is a good starting issue for a new contributor (it doesn't need advanced knowledge), set 'good first issue' to it. if it's a bug, set 'bug' to it. if it's a new feature you think should be developed, set ''enhancement' to it. etc.
-- 
-### who is responsible for the results of an issue?
-**all** assigned people are responsible. but if there is more than one person, the person who **created an issue and set its deadline** is responsible.
+## when to create an issue?
+an issue should be created when:
+- You want to start working on something.
+- You identify something that needs to be addressed, either by yourself or others.
 
+
+## how to create an issue?
+1. navigate to the project's issues tab.
+2. Click the "new issue" button.
+
+
+## what to consider when creating an issue?
+- assignee: Every issue must be assigned to a person. this could be yourself or another team member.
+- deadline: Set a clear deadline for each issue. Issues without deadlines will not be prioritized.
+- tags: apply at least one tag to every issue. Use descriptive tags that accurately reflect the issue's nature. For
+
+example:
+- good first issue: suitable for new contributors.
+- bug: reports a defect or error.
+- enhancement: suggest a new feature or improvement.
+
+
+## who is responsible for an issue?
+all assigned individuals are responsible for an issue's completion and results. however, if multiple people are assigned, the person who created the issue and set the deadline has primary responsibility.
 
 
 wait some days please, it's being completed...
