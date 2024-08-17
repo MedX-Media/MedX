@@ -13,7 +13,7 @@ we should also emphasis that this is an open-source project meaning that you can
 ## when to create an issue?
 an issue should be created when:
 - you want to start working on something.
-- you identify something that needs to be addressed, either by yourself or others.
+- you identify something that needs to be worked on, either by yourself or others.
 
 
 ## how to create an issue?
