@@ -1,6 +1,6 @@
 # Contribution "Why"
 
-Hi, and welcome to the MedX open-source project's contribution "why". This document is all about the reasons you might consider contributing to MedX. If you're reading this, you're likely already interested in making a difference. You can also check out our [Contribution Guide](contribution_guide.md) to help you get started on your MedX journey!
+Hi, and welcome to the MedX open-source project's contribution "why". This document is all about the reasons you might consider contributing to MedX. If you're reading this, you're likely already interested in making a difference. You can also check out our [Contribution Guide](CONTRIBUTION-GUIDE.md) to help you get started on your MedX journey!
 
 ## Why Contribute?
 
