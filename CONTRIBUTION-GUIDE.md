@@ -9,15 +9,16 @@ first of all, you should know that we encourage any contribution. even if it doe
 we should also emphasis that this is an open-source project meaning that you can contribute to everything. even this document itself. so please never hesitate about "can i contribute to this part or not?".
 
 # issues
-## when we create an issue?
+### when we create an issue?
 when we want to work on something, we create an issue. when we see that something needs to be worked on, by ourselves or by others, we create an issue too.
 
-## how to create an issue?
+### how to create an issue?
 go to the issues tab of the project and click on the 'new issue'. this is how you can create an issue. but care about the following principles:
-- every issue must be **assigned to a person**. so if you're creating an issue, make sure to assign it to a person. that person could be yourself too.
-- make sure to determine the **deadline** for every issue. we don't consider it an issue to work on, even if it has a deadline.
+- assigns: every issue must be **assigned to a person**. so if you're creating an issue, make sure to assign it to a person. that person could be yourself too.
+- deadlines: make sure to determine the **deadline** for every issue. we don't consider it an issue to work on, even if it has a deadline.
+- tags: every issue should have **at least one tag**. tags are clear and use them correctly. for example, if that issue is a good starting issue for a new contributor (it doesn't need advanced knowledge), set 'good first issue' to it. if it's a bug, set 'bug' to it. if it's a new feature you think should be developed, set ''enhancement' to it. etc.
 - 
-## who is responsible for the results of an issue?
+### who is responsible for the results of an issue?
 **all** assigned people are responsible. but if there is more than one person, the person who **created an issue and set its deadline** is responsible.
 
 
