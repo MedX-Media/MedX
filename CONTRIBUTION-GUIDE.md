@@ -22,7 +22,7 @@ an issue should be created when:
 
 
 ## what to consider when creating an issue?
-- assignee: every issue must be assigned to a person. this could be yourself or another team member.
+- assignee: every issue must be assigned at least to a person. this could be yourself or a team of people.
 - deadline: set a clear deadline for each issue. issues without deadlines should not even exist!
 - tags: apply at least one tag to every issue. use correct tags that accurately reflect the issue's nature.  
 for example:  
