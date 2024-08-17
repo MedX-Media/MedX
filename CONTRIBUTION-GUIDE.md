@@ -25,10 +25,10 @@ an issue should be created when:
 - assignee: Every issue must be assigned to a person. this could be yourself or another team member.
 - deadline: Set a clear deadline for each issue. Issues without deadlines will not be prioritized.
 - tags: apply at least one tag to every issue. use descriptive tags that accurately reflect the issue's nature.
-for example:
----> 'good first issue': suitable for new contributors.
----> 'bug': reports a defect or error.
----> 'enhancement': suggest a new feature or improvement.
+for example:  
+---> 'good first issue': suitable for new contributors.  
+---> 'bug': reports a defect or error.  
+---> 'enhancement': suggest a new feature or improvement.  
 
 
 ## who is responsible for an issue?
