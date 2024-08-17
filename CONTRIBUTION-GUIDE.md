@@ -32,6 +32,8 @@ an issue should be created when:
 ### how to create an issue?
 1. navigate to the project's issues tab.
 2. click the "new issue" button.
+3. set its title and description as clear and detailed as possible.
+4. submit.
 
 ### what to consider when creating an issue?
 - assignee: every issue must be assigned at least to a person. this could be yourself or a team of people.
