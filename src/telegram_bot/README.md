@@ -20,8 +20,8 @@ Before running the script, ensure you have the following:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/your-repo-url.git
-    cd your-repo-url
+    git clone https://github.com/BDadmehr0/MedX.git
+    cd MedX
     ```
 
 2. **Install Required Packages**: Make sure you have the necessary Python packages installed. You can install them using:
@@ -38,7 +38,8 @@ Before running the script, ensure you have the following:
 
 4. **Run the Script**:
     ```bash
-    python script_name.py
+    cd src/telegram_bot
+    python main.py
     ```
 
 ## Script Overview
@@ -62,7 +63,7 @@ Before running the script, ensure you have the following:
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the GNU License. See the LICENSE file for details.
 
 ## Contributing
 
