@@ -2,7 +2,7 @@ This guide is for writers who want to contribute content to the MedX platform. I
 
 ## principles:
 - your content should be **authentic**. you shouldn't copy/translate it from anyone else on the internet.
-- you should write in **persian language**, considering all its **grammatical/alphabetical tips**.
+- you should write in **persian language**, considering all its **grammatical, spelling, and punctuation tips**.
 - we prefer content which are **simultaneously related to tech and health**.
 - we prefer content about the **new things**! the newer, the better!
 
