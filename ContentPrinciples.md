@@ -1,3 +1,5 @@
+[persina version | نسخه فارسی](https://docs.google.com/document/d/1nqIRDjinEVl7wGcqvuURNnlcZZstjbf_mkG0IXAXJcg/edit?usp=sharing)
+
 This guide is for writers who want to contribute content to the MedX platform. If you’re unsure about whether your content will be featured on our website, this guide outlines our content selection process.
 
 ## principles:
