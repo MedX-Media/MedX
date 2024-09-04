@@ -1,0 +1,13 @@
+asgiref==3.8.1
+Django==5.1
+django-ckeditor==6.7.1
+django-ckeditor-5==0.2.13
+django-jalali==7.1.0
+django-js-asset==2.2.0
+django-tinymce==4.1.0
+jalali_core==1.0.0
+jdatetime==5.0.0
+pillow==10.4.0
+sqlparse==0.5.1
+typing_extensions==4.12.2
+tzdata==2024.1
