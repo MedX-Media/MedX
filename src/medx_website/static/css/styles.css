@@ -1,0 +1,410 @@
+/* static/css/styles.css */
+@font-face {
+    font-family: 'Estedad';
+    font-style: normal;
+    font-weight: 100;
+    src: url("fonts/Estedad.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: 'Estedad';
+    font-style: normal;
+    font-weight: 300;
+    src: url("fonts/Estedad.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: 'Estedad';
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/Estedad.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: 'Estedad';
+    font-style: normal;
+    font-weight: 950;
+    src: url("fonts/Estedad.woff2") format("woff2");
+  }
+
+body {
+    font-family: 'Estedad', sans-serif;
+    direction: rtl; /* Set text direction to right-to-left */
+    text-align: right; /* Align text to the right */
+}
+
+/* Header Styles */
+header {
+    padding: 10px;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+/* Custom CSS for Navbar */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav.ml-auto {
+    margin-left: auto;
+    flex-direction: row;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px; /* Adjust spacing between items */
+}
+
+.navbar-nav .nav-link {
+    color: #EEEEEE;
+}
+
+.navbar-nav .nav-link i {
+    font-size: 1.2rem; /* Adjust icon size if needed */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #222831;
+    color: #EEEEEE;
+    padding: 20px 0; /* Add padding to the top and bottom */
+}
+
+.footer-logo {
+    max-width: 150px; /* Adjust size if needed */
+}
+
+.footer-description {
+    text-align: justify; /* Ensure text is justified */
+    direction: rtl; /* Right-to-left direction */
+    margin-top: 10px;
+}
+
+.footer-nav {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-nav .nav-item {
+    margin-bottom: 2px; /* Reduce spacing between items */
+}
+
+.footer-nav .nav-link {
+    color: #EEEEEE;
+    text-decoration: none;
+    display: block; /* Ensure full-width clickable area */
+}
+
+.newsletter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* Ensure form elements are the same height */
+}
+
+.newsletter-email {
+    border-top-right-radius: 10px; /* Rounded corners on top-right */
+    border-bottom-right-radius: 10px; /* Rounded corners on bottom-right */
+    border-top-left-radius: 0; /* No rounding on top-left */
+    border-bottom-left-radius: 0; /* No rounding on bottom-left */
+    margin-left: 0; /* Remove space between input and button */
+    flex: 1; /* Make input grow to fill available space */
+    height: 50px; /* Set a fixed height to ensure uniformity */
+}
+
+.newsletter-btn {
+    border-top-left-radius: 10px; /* Rounded corners on top-left */
+    border-bottom-left-radius: 10px; /* Rounded corners on bottom-left */
+    border-top-right-radius: 0; /* No rounding on top-right */
+    border-bottom-right-radius: 0; /* No rounding on bottom-right */
+    padding: 10px 20px; /* Adjust padding to match height of input */
+    height: 50px; /* Set height to match input */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.post-detail {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    margin-top: 50px; /* Add margin-top to create space from the top of the page */
+}
+
+.featured-image {
+    object-fit: cover;
+    border-radius: 5px;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    margin-top: 50px; /* Space between author info and other elements */
+    margin-bottom: 15px;
+}
+
+.author-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px; /* Space between author image and name */
+}
+
+.post-meta {
+    margin: 10px 0; /* Space between meta info and content */
+}
+
+.post-content {
+    margin-top: 20px; /* Space above content */
+    text-align: justify; /* Justify text for better readability */
+}
+
+.social-share {
+    margin-top: 20px; /* Space above social share */
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the right */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #333;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #555;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.social-btn.telegram {
+    background-color: #0088cc; /* Telegram color */
+}
+
+.social-btn.linkedin {
+    background-color: #0077b5; /* LinkedIn color */
+}
+
+.social-btn.twitter {
+    background-color: #1da1f2; /* Twitter color */
+}
+
+.social-btn.instagram {
+    background-color: #e4405f; /* Instagram color */
+}
+
+.social-btn.print {
+    background-color: #000000; /* Print color */
+}
+
+.divider {
+    border: none;
+    border-top: 3px solid #000; /* Thicker and black line */
+    margin: 20px 0; /* Space above and below the divider */
+}
+
+.latest-posts {
+    margin-top: 20px; /* فاصله از بالا */
+    margin-bottom: 20px; /* فاصله از پایین برای جلوگیری از چسبیدن به فوتر */
+    padding-right: 0; /* حذف پدینگ سمت راست */
+}
+
+.list-group-item {
+    display: flex;
+    border: none; /* حذف خطوط حاشیه */
+    padding: 10px 0; /* تنظیم پدینگ برای آیتم‌های لیست */
+}
+
+.latest-post-thumbnail {
+    width: 100%; /* تصویر به اندازه ۱۰۰٪ عرض عنصر والد باشد */
+    height: auto; /* ارتفاع را به صورت خودکار تنظیم کن */
+    aspect-ratio: 16/9; /* تنظیم نسبت 9:16 */
+    border-radius: 5px; /* انحنای گوشه‌ها برای زیبایی */
+    object-fit: cover; /* تصویر را به طور کامل در ناحیه خود پوشش دهد */
+    margin-left: 10px; /* فاصله بین تصویر و متن */
+}
+
+.latest-post-title {
+    margin-right: 10px; /* حذف فضای اضافی اطراف عنوان */
+    font-size: 1.1em; /* تنظیم اندازه فونت */
+    margin-bottom: 5px; /* ایجاد فاصله بین عنوان و متا */
+}
+
+.latest-post-title a {
+    color: #000; /* تنظیم رنگ لینک به سیاه */
+    text-decoration: none; /* حذف خط زیرین لینک */
+}
+
+.latest-post-meta {
+    margin-right: 10px;
+    font-size: 0.9em; /* تنظیم اندازه فونت برای اطلاعات متا */
+    color: #555; /* رنگ کمی روشن‌تر برای متا */
+}
+
+/* General styles for the home page */
+/* Ensure there's a margin between the top of the content and the header */
+.home-content {
+    margin-top: 20px; /* Adjust this value to your needs */
+}
+
+/* Styles for the featured post */
+.home-featured-post {
+    position: relative;
+    border-radius: 5px; /* Adding border-radius to the container */
+    overflow: hidden; /* Ensure that border-radius works correctly */
+}
+
+.home-featured-post-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9; /* Aspect ratio of 16:9 */
+    overflow: hidden;
+    border-radius: 5px; /* Adding border-radius to the image */
+}
+
+.home-featured-post-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    border-radius: 10px; /* Adding border-radius to the image */
+}
+
+.home-featured-post-overlay {
+    position: absolute;
+    bottom: 0; /* Align overlay to the bottom */
+    right: 0; /* Align overlay to the right */
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px; /* Adding border-radius to bottom corners */
+}
+
+.home-featured-post-overlay-content {
+    text-align: right; /* Align text to the right */
+    position: absolute;
+    bottom: 10px; /* Add some space from the bottom */
+    right: 10px; /* Add some space from the right */
+}
+
+/* Styles for the latest posts */
+.home-latest-posts {
+    margin: 50px 0; /* Add margin to separate from footer */
+}
+
+.home-latest-post {
+    padding: 50px;
+}
+
+.home-latest-post-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9; /* Aspect ratio of 16:9 */
+    overflow: hidden;
+    border-radius: 10px; /* Adding border-radius to the image */
+    object-fit: cover;
+}
+
+.home-latest-post-content{
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.home-latest-post-title {
+    font-size: 1.1em; /* تنظیم اندازه فونت */
+    margin-bottom: 5px; /* ایجاد فاصله بین عنوان و متا */
+}
+
+.home-latest-post-title a {
+    color: #000; /* تنظیم رنگ لینک به سیاه */
+    text-decoration: none; /* حذف خط زیرین لینک */
+}
+
+.home-latest-post-meta {
+    font-size: 0.9em; /* تنظیم اندازه فونت برای اطلاعات متا */
+    color: #555; /* رنگ کمی روشن‌تر برای متا */
+}
+
+.home-popular-posts {
+    margin-top: 20px; /* فاصله از بالا */
+    margin-bottom: 20px; /* فاصله از پایین برای جلوگیری از چسبیدن به فوتر */
+    padding-right: 0; /* حذف پدینگ سمت راست */
+}
+
+.home-popular-list-group-item {
+    list-style-type: none;
+    border: none; /* حذف خطوط حاشیه */
+    padding: 10px 0; /* تنظیم پدینگ برای آیتم‌های لیست */
+}
+
+.home-popular-post-title {
+    font-size: 1.1em; /* تنظیم اندازه فونت */
+    margin-bottom: 5px; /* ایجاد فاصله بین عنوان و متا */
+}
+
+.home-popular-post-title a {
+    color: #000; /* تنظیم رنگ لینک به سیاه */
+    text-decoration: none; /* حذف خط زیرین لینک */
+}
+
+.home-popular-post-meta {
+    font-size: 0.9em; /* تنظیم اندازه فونت برای اطلاعات متا */
+    color: #555; /* رنگ کمی روشن‌تر برای متا */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center; /* مرکز کردن پگینیشن */
+    padding: 0;
+    margin: 20px 0; /* فاصله بالا و پایین پگینیشن */
+}
+
+.pagination .page-item {
+    margin: 0 5px; /* فاصله بین دکمه‌های پگینیشن */
+}
+
+.pagination .page-link {
+    border-radius: 5px; /* انحنا برای دکمه‌ها */
+    padding: 0.5em 0.75em; /* تنظیمات داخلی دکمه‌ها */
+    border: 1px solid #dee2e6; /* مرز دکمه‌ها */
+    color: #007bff; /* رنگ متن دکمه‌ها */
+    background-color: #fff; /* رنگ پس‌زمینه دکمه‌ها */
+    text-align: center; /* متن را مرکز کنیم */
+}
+
+.pagination .page-link:hover {
+    background-color: #e9ecef; /* رنگ پس‌زمینه هنگام هاور */
+    color: #0056b3; /* رنگ متن هنگام هاور */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff; /* رنگ پس‌زمینه دکمه فعال */
+    color: #fff; /* رنگ متن دکمه فعال */
+    border-color: #007bff; /* مرز دکمه فعال */
+}
