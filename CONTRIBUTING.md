@@ -48,7 +48,7 @@ That's it! You've contributed to MedX as a developer.
     - You shouldn't copy/translate it from anyone else on the internet.
     - You should write in Persian language, considering all its grammatical, spelling, and punctuation tips.
     - Make sure to include the sources you used at the end of your post.
-4. To have your content considered for publication, you can email it to "medxmedia.net@gmail.com" or our [telegram admin](t.me/@MedX_admin). Send us your content with your full name and a photo of yourself, so we can feature you as the post's author on the website. We're also working on a self-service system for the next weeks, allowing you to post your content with all the website's features directly.
+4. To have your content considered for publication, you can email it to "medxmedia.net@gmail.com" or our [Telegram admin](t.me/@MedX_admin). Send us your content with your full name and a photo of yourself, so we can feature you as the post's author on the website. We're also working on a self-service system for the next weeks, allowing you to post your content with all the website's features directly.
 That's it! You've contributed to MedX as a content creator.
 
 #### certified writers
@@ -56,7 +56,7 @@ Anyone can write on MedX's platform. However, to maintain content quality, we re
 - You are passionate about empowering med people to know about health-tech-related topics.
 - You are a good writer with a portfolio of written work. Please provide links to your samples.
 - You have a strong understanding of the topics you wish to write about, backed by relevant experience or qualifications. Please provide links to your works/projects.
-If you think you meet these criteria, we invite you to schedule a meeting. Our Telegram administrator is also available to answer any questions you may have.
+If you think you meet these criteria, we invite you to [set a meeting](https://calendly.com/medxmedia1/30min). Our [Telegram admin](t.me/@MedX_admin) is also available to answer any questions you may have.
 
 ---
 
