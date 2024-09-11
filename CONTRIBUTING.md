@@ -55,7 +55,7 @@ That's it! You've contributed to MedX as a content creator.
 Anyone can write on MedX's platform. However, to maintain content quality, we require a team of "certified writers". To become a certified writer, you can schedule a meeting with our Head of Writers. Before scheduling, please ensure you meet the eligibility criteria:
 - You are passionate about empowering med people to know about health-tech-related topics.
 - You are a good writer with a portfolio of written work. Please provide links to your samples.
-- You have a strong understanding of the topics you wish to write about, backed by relevant experience or qualifications. Please provide links to your works/projects.
+- You have a strong understanding of the topics you wish to write about, backed by relevant experience or qualifications. Please provide links to your works/projects.  
 If you think you meet these criteria, we invite you to [set a meeting](https://calendly.com/medxmedia1/30min). Our [Telegram admin](t.me/@MedX_admin) is also available to answer any questions you may have.
 
 ---
