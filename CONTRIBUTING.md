@@ -27,15 +27,15 @@ You are free to contribute to the MedX open-source project based on your interes
 ### Want to contribute to website development?
 1. Fork the repository.
 2. Head over to the [issues section](https://github.com/MedX-Media/MedX/issues) and pick those labeled "development", and contribute to any issue you'd like.
-3. Consider Development Principles:  
-    Programming:
-    - Check out [MedX src directory](https://github.com/MedX-Media/MedX/tree/main/src)
-    - Write clean and well-organized code as much as possible.
-    - Comment your code to ensure others can easily understand it.  
-    Designing:
-    - Check out [MedX design directory](https://github.com/MedX-Media/MedX/tree/main/design)
-    - Design your ideas with any tools you want such as Figma, Photoshop, etc.
-    - Put your output in the directory with a suitable file name.
+3. Consider Development Principles:
+    - Programming:
+        - Check out [MedX src directory](https://github.com/MedX-Media/MedX/tree/main/src)
+        - Write clean and well-organized code as much as possible.
+        - Comment your code to ensure others can easily understand it.
+    - Designing:
+        - Check out [MedX design directory](https://github.com/MedX-Media/MedX/tree/main/design)
+        - Design your ideas with any tools you want such as Figma, Photoshop, etc.
+        - Put your output in the directory with a suitable file name.
 4. Once you've resolved an issue, submit a pull request from "your fork" to "MedX development branch", including a detailed explanation.
 That's it! You've contributed to MedX as a developer.
 
