@@ -217,8 +217,16 @@ footer {
 }
 
 .post-content {
-    margin-top: 20px;
+    max-width: 800px;
+    margin: 20px auto; /* مرکز کردن محتوا */
+    padding: 0 15px; /* برای ایجاد فاصله‌ی مناسب در صفحات کوچکتر */
     text-align: justify;
+}
+
+.post-content p img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* دکمه‌های شبکه‌های اجتماعی */
