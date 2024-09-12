@@ -46,10 +46,14 @@ INSTALLED_APPS = [
 ]
 
 TINYMCE_DEFAULT_CONFIG = {
-    'plugins': 'advlist autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media nonbreaking save table contextmenu directionality template paste textcolor',
-    'toolbar': 'undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+    'plugins': 'advlist autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media nonbreaking save table contextmenu directionality template paste textcolor image imagetools',
+    'toolbar': 'undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | image | link | removeformat | help',
     'toolbar_mode': 'floating',
-    "directionality": "rtl",
+    'image_advtab': True,
+    'file_picker_types': 'image',
+    'automatic_uploads': True,
+    'images_upload_url': '/upload_image/',
+    'directionality': 'rtl',
 }
 
 MIDDLEWARE = [
