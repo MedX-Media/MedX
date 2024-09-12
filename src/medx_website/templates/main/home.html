@@ -1,0 +1,107 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load custom_filters %}
+
+{% block title %}خانه - Medx{% endblock %}
+
+{% block content %}
+<div class="row home-content">
+    <div class="col-md-6">
+        <!-- Featured post -->
+        <div class="home-featured-post">
+            <div class="home-featured-post-image">
+                <a href="{% url 'post_detail' slug=latest_post.slug %}" class="home-featured-post-link">
+                    <img src="{{ latest_post.featured_image.url }}" alt="Featured Image" class="img-fluid">
+                </a>
+                <div class="home-featured-post-overlay">
+                    <div class="home-featured-post-overlay-content">
+                        <h2><a href="{% url 'post_detail' slug=latest_post.slug %}" class="home-featured-post-link">{{ latest_post.title }}</a></h2>
+                        <span>{{ latest_post.author.first_name }} {{ latest_post.author.last_name }} | {{ latest_post.publish_date|to_jalali|persian_numbers }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 home-popular-posts">
+        <!-- Popular posts -->
+        <h3>پربازدیدترین مطالب</h3>
+        <ul>
+            {% for post in popular_posts %}
+                <li class="home-popular-list-group-item">
+                    <h4 class="home-popular-post-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h4>
+                    <span class="home-popular-post-meta">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.publish_date|to_jalali|persian_numbers }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<!-- Latest posts -->
+<div class="home-latest-posts">
+    <h3>آخرین مطالب</h3>
+    <div class="row">
+        {% for post in page_obj %}
+            <div class="col-md-4 home-latest-post">
+                <a href="{% url 'post_detail' slug=post.slug %}">
+                    <img src="{{ post.featured_image.url }}" alt="Post Image" class="img-fluid home-latest-post-image">
+                </a>
+                <div class="home-latest-post-content">
+                    <h4 class="home-latest-post-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h4>
+                    <span class="home-latest-post-meta">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.publish_date|to_jalali|persian_numbers }}</span>
+                </div>
+            </div>
+        {% empty %}
+            <p>هیچ پستی برای نمایش وجود ندارد.</p>
+        {% endfor %}
+    </div>
+    <!-- Pagination -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page=1" aria-label="First">
+                        <span aria-hidden="true">&laquo;&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <span class="page-link">&laquo;&laquo;</span>
+                </li>
+                <li class="page-item disabled">
+                    <span class="page-link">&laquo;</span>
+                </li>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+                <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+                    <a class="page-link" href="?page={{ num }}">{{ num|persian_numbers }}</a>
+                </li>
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last">
+                        <span aria-hidden="true">&raquo;&raquo;</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <span class="page-link">&raquo;</span>
+                </li>
+                <li class="page-item disabled">
+                    <span class="page-link">&raquo;&raquo;</span>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+{% endblock %}
