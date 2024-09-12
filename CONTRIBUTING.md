@@ -6,17 +6,28 @@ Welcome to MedX's contribution guide! All contributions, big or small, are valua
 ## Why Contribute?
 The reasons people contribute to open-source projects like MedX are as diverse as the contributors themselves. Here are just a few motivations you might resonate with:
 
-1. *Learning and Growth*:
+1. Learning and Growth:
+    
     Contributing to open-source projects is an excellent way to learn new skills and expand your knowledge. Whether you're coding, designing, writing, or managing, you'll gain hands-on experience that can accelerate your personal and professional growth.
-2. *Building a Portfolio*:
+    
+2. Building a Portfolio:
+    
     Every contribution you make adds to your portfolio. This is especially valuable if you're looking to showcase your skills to potential employers or collaborators. Open-source contributions are proof of your abilities.
-3. *Community and Networking*:
+
+3. Community and Networking:
+    
     By contributing to MedX, you become part of a global community of like-minded individuals. This is an opportunity to network, collaborate, and learn from others who share your passion for health-tech and open-source development.
-4. *Making an Impact*:
+
+4. Making an Impact:
+    
     Your contributions to MedX directly impact the world of health-tech. By helping to create and refine tools, resources, and content, you're playing a part in shaping the future of healthcare.
-5. *Giving Back*:
+
+5. Giving Back:
+    
     For many, contributing to open-source is a way to give back to a community that has provided them with so much. If you've benefited from open-source projects in the past, contributing to MedX is a way to return the favor.
-6. *Bridging Health and Technology*:
+
+6. Bridging Health and Technology:
+    
     With the rapid development of new technologies, you can play a role in connecting health and technology. By contributing to MedX, you can help expand this growing community and enhance the integration between health and technology.
 
 The spectrum of "whys" is vast, and your reason for contributing is valid, no matter what it is. We encourage you to share your unique "why" by contributing to this document. Your perspective could inspire others to join in! Thank you for being part of MedX. Your contributions, whatever the motivation, are invaluable.
