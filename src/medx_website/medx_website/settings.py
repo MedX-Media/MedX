@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'blog',
     'django_jalali',
     'tinymce',
+    'account',
+    'event',
 ]
 
 TINYMCE_DEFAULT_CONFIG = {
@@ -65,7 +67,9 @@ ROOT_URLCONF = 'medx_website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,6 +131,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+STATIC_ROOT = '/assets/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 

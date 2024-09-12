@@ -1,37 +1,24 @@
+/* فونت‌ها */
 @font-face {
-    font-family: 'Estedad';
-    font-style: normal;
-    font-weight: 100;
-    src: url("fonts/Estedad.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: 'Estedad';
+    font-family: 'Estedad-Regular';
     font-style: normal;
     font-weight: 300;
-    src: url("fonts/Estedad.woff2") format("woff2");
-  }
-  
-  @font-face {
-    font-family: 'Estedad';
-    font-style: normal;
-    font-weight: 400;
-    src: url("fonts/Estedad.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: 'Estedad';
-    font-style: normal;
-    font-weight: 950;
-    src: url("fonts/Estedad.woff2") format("woff2");
-  }
-
-body {
-    font-family: 'Estedad', sans-serif;
-    direction: rtl;
-    text-align: right;
+    src: url("fonts/Estedad-Regular.woff") format("woff"),
+         url("fonts/Estedad-Regular.woff2") format("woff2"),
+         url("fonts/Estedad-Regular.ttf") format("truetype"),
+         url("fonts/Estedad-Regular.eot") format("embedded-opentype");
 }
 
-/* Header Styles */
+/* استایل‌های عمومی */
+body {
+    font-family: 'Estedad', sans-serif;
+    direction: rtl; /* جهت نمایش از راست به چپ */
+    text-align: right; /* تراز راست */
+}
+
+/* استایل‌های هدر */
 header {
+    position: relative;
     padding: 10px;
 }
 
@@ -39,36 +26,97 @@ header {
     height: 50px;
 }
 
+/* چینش افقی آیتم‌های منو */
 .navbar-nav {
     display: flex;
     align-items: center;
 }
 
-.navbar-nav.ml-auto {
-    margin-left: auto;
-    flex-direction: row;
+.nav-icon {
+    margin-left: 0;
+    margin-right: auto;
 }
 
+/* فضای بین آیتم‌های منو */
 .navbar-nav .nav-item {
-    margin-left: 15px;
+    margin: 0 10px;
 }
 
+/* لینک‌های منو */
 .navbar-nav .nav-link {
     color: #EEEEEE;
 }
 
+/* اندازه آیکون‌های لینک */
 .navbar-nav .nav-link i {
     font-size: 1.2rem;
 }
 
+/* استایل دکمه navbar-toggler */
+.navbar-toggler {
+    border: none; /* حذف حاشیه دکمه */
+    position: absolute; /* قرار دادن در موقعیت مطلق */
+    top: 50%; /* قرار دادن در وسط عمودی صفحه */
+    left: 10px; /* فاصله از سمت چپ هدر */
+    transform: translateY(-50%); /* جابه‌جا کردن دکمه به وسط عمودی */
+    z-index: 9999; /* قرار دادن در بالای دیگر عناصر */
+    background-color: transparent; /* پس‌زمینه شفاف برای دکمه */
+    color: #EEEEEE;
+}
 
-/* Footer Styles */
+/* استایل‌های منوی کشویی */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: 9999;
+}
+.side-menu.open {
+    left: 0;
+}
+.side-menu .menu-content {
+    position: relative;
+    height: 100%;
+    background-color: #222831;
+    color: #EEEEEE;
+    padding: 20px;
+}
+.side-menu .menu-content .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #EEEEEE;
+    cursor: pointer;
+}
+.side-menu .menu-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+}
+.side-menu .menu-content ul li {
+    margin: 15px auto;
+}
+.side-menu .menu-content ul li a {
+    color: #EEEEEE;
+    text-decoration: none;
+    font-size: 18px;
+}
+.side-menu .menu-content ul li a:hover {
+    text-decoration: none;
+}
+
+/* استایل‌های فوتر */
 footer {
     background-color: #222831;
     color: #EEEEEE;
     padding: 20px 0;
 }
 
+/* لوگوی فوتر */
 .footer-logo {
     max-width: 150px;
 }
@@ -76,11 +124,12 @@ footer {
 .footer-description {
     text-align: justify;
     direction: rtl;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
+/* فهرست لینک‌های فوتر */
 .footer-nav {
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 0px;
     list-style-type: none;
 }
@@ -89,16 +138,19 @@ footer {
     margin-bottom: 2px;
 }
 
+/* لینک‌های فوتر */
 .footer-nav .nav-link {
     color: #EEEEEE;
     text-decoration: none;
     display: block;
 }
 
+/* استایل‌های فرم خبرنامه */
 .newsletter-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: stretch;
+    margin: 10px auto;
 }
 
 .newsletter-form {
@@ -107,6 +159,7 @@ footer {
     align-items: stretch;
 }
 
+/* ایمیل فرم خبرنامه */
 .newsletter-email {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -114,23 +167,24 @@ footer {
     border-bottom-left-radius: 0;
     margin-left: 0;
     flex: 1;
-    height: 50px;
+    height: 60px;
 }
 
+/* دکمه ارسال خبرنامه */
 .newsletter-btn {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     padding: 10px 20px;
-    height: 50px;
+    height: 60px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
+/* استایل‌های پست‌ها */
 .post-detail {
     max-width: 800px;
     margin: 0 auto;
@@ -167,6 +221,7 @@ footer {
     text-align: justify;
 }
 
+/* دکمه‌های شبکه‌های اجتماعی */
 .social-share {
     margin-top: 20px;
 }
@@ -192,11 +247,13 @@ footer {
     transition: background-color 0.3s, transform 0.3s;
 }
 
+/* هاور روی دکمه‌های اجتماعی */
 .social-btn:hover {
     background-color: #555;
     transform: scale(1.1);
 }
 
+/* رنگ شبکه‌های اجتماعی */
 .social-btn.telegram {
     background-color: #0088cc;
 }
@@ -223,6 +280,7 @@ footer {
     margin: 20px 0;
 }
 
+/* استایل‌های آخرین پست‌ها */
 .latest-posts {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -235,7 +293,12 @@ footer {
     padding: 10px 0;
 }
 
-.latest-post-thumbnail {
+.latest-post-thumbnail{
+    max-width: 20%;
+    height: auto;
+}
+
+.latest-post-thumbnail img{
     width: 100%;
     height: auto;
     aspect-ratio: 16/9;
@@ -261,12 +324,12 @@ footer {
     color: #555;
 }
 
-/* Styles for the home page */
+/* استایل‌های صفحه اصلی */
 .home-content {
     margin-top: 20px;
 }
 
-/* Styles for the featured post */
+/* استایل پست‌های ویژه */
 .home-featured-post {
     position: relative;
     border-radius: 5px;
@@ -310,9 +373,14 @@ footer {
     right: 10px;
 }
 
-/* Styles for the latest posts */
+.home-featured-post-link{
+    text-decoration: none;
+    color: #EEEEEE;
+}
+
+/* پست‌های آخر صفحه اصلی */
 .home-latest-posts {
-    margin: 50px 0;
+    margin-top: 25px;
 }
 
 .home-latest-post {
@@ -348,10 +416,10 @@ footer {
     color: #555;
 }
 
+/* پست‌های محبوب صفحه اصلی */
 .home-popular-posts {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-right: 0;
+    margin-top: 0px;
+    padding: 0 10px;
 }
 
 .home-popular-list-group-item {
@@ -375,6 +443,7 @@ footer {
     color: #555;
 }
 
+/* استایل‌های pagination */
 .pagination {
     display: flex;
     justify-content: center;
@@ -391,17 +460,120 @@ footer {
     padding: 0.5em 0.75em;
     border: 1px solid #dee2e6;
     color: #007bff;
-    background-color: #fff;
-    text-align: center;
+    text-decoration: none;
 }
 
 .pagination .page-link:hover {
-    background-color: #e9ecef;
-    color: #0056b3;
+    background-color: #007bff;
+    color: #fff;
 }
 
 .pagination .page-item.active .page-link {
     background-color: #007bff;
     color: #fff;
     border-color: #007bff;
+}
+
+/* استایل‌های ریسپانسیو */
+
+/* برای صفحه‌های با عرض کمتر از 768 پیکسل */
+@media (max-width: 768px) {
+    /* تغییر چینش آیتم‌های منو */
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* تغییرات در فوتر */
+    .footer-logo {
+        max-width: 100px;
+    }
+
+    .footer-nav {
+        text-align: center;
+    }
+
+    .footer-description {
+        margin-top: 10px;
+    }
+
+    /* تغییر چینش فرم خبرنامه */
+    .newsletter-form {
+        width: 100%;
+    }
+
+    /* تغییر اندازه تصاویر پست */
+    .featured-image, 
+    .home-featured-post-image img {
+        aspect-ratio: auto;
+        height: auto;
+        width: 100%;
+    }
+
+    .home-latest-posts{
+        padding: 0 20px;
+    }
+
+    .home-popular-posts {
+        margin-top: 10px;
+    }
+
+    /* استایل‌های آخرین پست‌ها */
+    .latest-post-thumbnail {
+        max-width: 33%; /* تغییر اندازه تصویر به 100% از عرض عنصر مادر */
+        height: auto; /* حفظ نسبت تصویر */
+    }
+
+    .latest-post-thumbnail img{
+        width: 100%; /* تغییر اندازه تصویر به 100% از عرض عنصر مادر */
+        height: auto; /* حفظ نسبت تصویر */
+        max-width: 100%; /* جلوگیری از بزرگتر شدن تصویر از عرض ستون */
+        object-fit: cover; /* اطمینان از پوشش مناسب تصویر */
+    }
+
+    /* تنظیمات برای کوچک‌تر شدن متن‌ها و چیدمان‌ها */
+    .post-detail {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .author-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .author-image {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .pagination {
+        align-items: center;
+    }
+}
+
+/* برای صفحه‌های با عرض کمتر از 480 پیکسل */
+@media (max-width: 480px) {
+    /* تغییر بیشتر در استایل فوتر */
+    .footer-logo {
+        max-width: 80px;
+    }
+
+    /* چینش کامل منو به صورت عمودی */
+    .navbar-nav {
+        align-items: flex-start;
+    }
+
+    /* کوچک‌تر شدن متن‌ها و عناصر صفحه */
+    .home-content {
+        margin: 10px;
+    }
+
+    .post-detail {
+        padding: 0 5px;
+    }
+
+    .pagination .page-link {
+        padding: 0.5em 0.5em;
+    }
 }

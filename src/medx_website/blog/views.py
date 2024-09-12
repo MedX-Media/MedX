@@ -28,7 +28,7 @@ def home(request):
         'page_obj': page_obj,
         'popular_posts': popular_posts,
     }
-    return render(request, 'blog/home.html', context)
+    return render(request, 'main/home.html', context)
 
 
 def post_detail(request, slug):
