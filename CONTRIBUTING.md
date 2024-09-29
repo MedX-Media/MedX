@@ -48,6 +48,7 @@ That's it! You've contributed to MedX as a developer.
     - You shouldn't copy/translate it from anyone else on the internet.
     - You should write in Persian language, considering all its grammatical, spelling, and punctuation tips.
     - Make sure to include the sources you used at the end of your post.
+    - You can use any content in your blog post, including images, videos, gits, etc. but if it's too long or too heavy, please upload it somewhere else and share its link in the blog.
 4. To have your content considered for publication, you can email it to "medxmedia1@gmail.com" or our [Telegram admin](t.me/@MedX_admin). Send us your content with your full name and a photo of yourself, so we can feature you as the post's author on the website. We're also working on a self-service system for the next weeks, allowing you to post your content with all the website's features directly.
 That's it! You've contributed to MedX as a content creator.
 
