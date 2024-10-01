@@ -26,7 +26,7 @@ def home(request):
     popular_posts = Post.objects.order_by('-read_time')[:3]
 
     all_posts = Post.objects.order_by('-publish_date')
-    paginator = Paginator(all_posts, 10)
+    paginator = Paginator(all_posts, 9)
 
     page_number = request.GET.get('page', 1)
 

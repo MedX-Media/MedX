@@ -58,7 +58,7 @@
                     </div>
                     <div class="latest-post-more">
                         <h4 class="latest-post-title"><a href="{% url 'post_detail' slug=latest_post.slug %}">{{ latest_post.title }}</a></h4>
-                        <span class="latest-post-meta">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.publish_date|to_jalali|persian_numbers }}</span>
+                        <span class="latest-post-meta">{{ latest_post.author.first_name }} {{ latest_post.author.last_name }} | {{ latest_post.publish_date|to_jalali|persian_numbers }}</span>
                     </div>
                 </li>
             {% endfor %}
