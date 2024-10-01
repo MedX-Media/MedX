@@ -2,16 +2,17 @@
 @font-face {
     font-family: 'Estedad-Regular';
     font-style: normal;
-    font-weight: 300;
-    src: url("fonts/Estedad-Regular.woff") format("woff"),
-         url("fonts/Estedad-Regular.woff2") format("woff2"),
-         url("fonts/Estedad-Regular.ttf") format("truetype"),
-         url("fonts/Estedad-Regular.eot") format("embedded-opentype");
+    font-weight: normal;
+    src: url('../fonts/Estedad-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Estedad-Regular.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+         url('../fonts/Estedad-Regular.woff2') format("woff2"), /* Super Modern Browsers */
+         url('../fonts/Estedad-Regular.woff') format("woff"), /* Modern Browsers */
+         url('../fonts/Estedad-Regular.ttf') format("truetype"); /* Safari, Android, iOS */
 }
 
 /* استایل‌های عمومی */
 body {
-    font-family: 'Estedad', sans-serif;
+    font-family: 'Estedad', 'Estedad-Regular' !important;
     direction: rtl; /* جهت نمایش از راست به چپ */
     text-align: right; /* تراز راست */
 }
