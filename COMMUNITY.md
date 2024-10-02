@@ -1,6 +1,6 @@
-as we are an open-source project, we are already a community. so we have some places for developers to be around and talk about medx development and other related things.  
+As an open-source project, we are already a community. We have dedicated spaces for developers to engage in discussions about MedX development and related topics.
 
----> you can freely talk about every part of the project in the [discussions tab](https://github.com/Sinusealpha/MedX/discussions).  
----> you can also join our [developers community](https://t.me/+0i9Cal72Q8dlOTY8) on telegram.  
+You can freely discuss any aspect of the project in the [discussions tab](https://github.com/Sinusealpha/MedX/discussions).
+You can also join our [developers' community](https://t.me/+0i9Cal72Q8dlOTY8) on Telegram.
 
-here are two main places we have to talk about the development, especially about medx. but you can build your community around medx's development if you're interested and that's more than welcome.
+These are the two primary platforms for discussing the development of MedX. We also encourage you to build your community throughout MedX's development—your contributions are more than welcome!
