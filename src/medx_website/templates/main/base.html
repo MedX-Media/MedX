@@ -126,6 +126,41 @@
         window.onload = function() {
             localStorage.removeItem('pageReloaded');
         };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // پیدا کردن تمام عناصر <pre><code> و اضافه کردن دکمه کپی
+            const codeBlocks = document.querySelectorAll("pre code");
+        
+            codeBlocks.forEach((block) => {
+                // ساختن دکمه کپی
+                const copyButton = document.createElement("button");
+                copyButton.innerHTML = "Copy";
+                copyButton.className = "copy-code-btn";
+                
+                // ساختن یک div برای بسته‌بندی کد و دکمه
+                const codeWrapper = document.createElement("div");
+                codeWrapper.className = "code-wrapper";
+        
+                // اضافه کردن بلوک کد و دکمه به wrapper
+                block.parentElement.insertBefore(codeWrapper, block);
+                codeWrapper.appendChild(block.parentElement.removeChild(block));
+                codeWrapper.appendChild(copyButton);
+        
+                // وقتی دکمه کپی کلیک شد
+                copyButton.addEventListener("click", () => {
+                    const range = document.createRange();
+                    range.selectNodeContents(block);
+                    const selection = window.getSelection();
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                    document.execCommand("copy");
+                    copyButton.innerHTML = "Copied!";
+                    setTimeout(() => {
+                        copyButton.innerHTML = "Copy";
+                    }, 2000);
+                });
+            });
+        });
     </script>
 </body>
 </html>
