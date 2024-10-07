@@ -4,6 +4,10 @@
 
 {% block title %}{{ post.title }} - Medx{% endblock %}
 
+{% block og_title %}{{ post.title }}{% endblock %}
+{% block og_description %}{{ post.excerpt }}{% endblock %}
+{% block og_image %}{{ post.featured_image.url }}{% endblock %}
+{% block og_type %}article{% endblock %}
 {% block content %}
 <div class="post-detail">
     <div class="row mb-1">
