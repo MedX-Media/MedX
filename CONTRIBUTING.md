@@ -68,8 +68,8 @@ You are free to contribute to the MedX open-source project based on your interes
 8. Submit a Pull Request  
     Once your changes are pushed to your fork, it's time to submit a pull request:
     - Go to your forked repository on GitHub.
-    - Click the "Compare & Pull Request" button.
-    - Select the MedX `development` branch as the base and your branch as the compare.
+    - Click the "Pull Request" button.
+    - Select the MedX `development` branch as the **base** and `your` branch as the **compare**.
     - Write a detailed description of the changes you made, explaining how it resolves the issue or contributes to the project.
     - Submit the pull request.
 9. That's it! You've contributed to MedX as a developer.
