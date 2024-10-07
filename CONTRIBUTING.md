@@ -60,6 +60,79 @@ Anyone can write on MedX's platform. However, to maintain content quality, we re
 
 If you think you meet these criteria, we invite you to [set a meeting](https://calendly.com/medxmedia1/30min). Our [Telegram admin](t.me/@MedX_admin) is also available to answer any questions you may have.
 
+برای مستندسازی فرآیند ایجاد فایل `pre-commit` و فرمت کردن کدها در پروژه‌تان، می‌توانید یک فایل Markdown (مثلاً `SETUP.md` یا `CONTRIBUTING.md`) بسازید و مراحل و توضیحات مربوطه را در آن قرار دهید. در ادامه یک نمونه مستندات برای این کار آورده شده است:
+
+---
+
+# Setup Pre-Commit Hook for Code Formatting
+
+## Introduction
+This document outlines the steps to set up a pre-commit hook for automatic code formatting in our project. By implementing this hook, we can ensure that all code is properly formatted before it is committed to the repository.
+
+## Prerequisites
+Before proceeding, ensure that the following tools are installed:
+
+- **Python** (and pip)
+- **Node.js** (and npm)
+- **Black** (for Python formatting)
+- **Prettier** (for HTML, CSS, and JavaScript formatting)
+- **isort** (for sorting Python imports)
+
+## Steps to Create a Pre-Commit Hook
+
+### 1. Navigate to the Git Hooks Directory
+Go to the `.git/hooks` directory in your project:
+```bash
+cd .git/hooks
+```
+
+### 2. Create the Pre-Commit File
+Create a new file named `pre-commit`:
+```bash
+touch pre-commit
+```
+
+### 3. Add Formatting Commands
+Open the `pre-commit` file in a text editor and add the following code:
+
+```bash
+#!/bin/sh
+
+# Format Python files with Black
+echo "Formatting Python files..."
+black .
+
+# Format HTML, CSS, and JavaScript files with Prettier
+echo "Formatting HTML, CSS, and JavaScript files..."
+npx prettier --write "**/*.html" "**/*.css" "**/*.js"
+
+# Sort imports for Python files
+echo "Sorting imports in Python files..."
+isort .
+
+echo "Pre-commit formatting done."
+```
+
+### 4. Make the Pre-Commit File Executable
+Make the `pre-commit` file executable by running:
+```bash
+chmod +x pre-commit
+```
+
+### 5. Testing the Pre-Commit Hook
+To test the pre-commit hook, make some changes to your code and then attempt to commit:
+```bash
+git add .
+git commit -m "Test pre-commit hook"
+```
+
+### 6. Additional Notes
+- Ensure that **Black** and **Prettier** are installed as dependencies in your project.
+- You can customize the pre-commit hook by adding any other formatting or linting tools you prefer.
+
+## Conclusion
+By following these steps, you can set up a pre-commit hook that automatically formats your code before each commit. This helps maintain code quality and consistency across the project.
+
 ---
 
 ## Issues
