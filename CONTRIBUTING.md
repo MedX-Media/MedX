@@ -60,9 +60,6 @@ Anyone can write on MedX's platform. However, to maintain content quality, we re
 
 If you think you meet these criteria, we invite you to [set a meeting](https://calendly.com/medxmedia1/30min). Our [Telegram admin](t.me/@MedX_admin) is also available to answer any questions you may have.
 
-برای مستندسازی فرآیند ایجاد فایل `pre-commit` و فرمت کردن کدها در پروژه‌تان، می‌توانید یک فایل Markdown (مثلاً `SETUP.md` یا `CONTRIBUTING.md`) بسازید و مراحل و توضیحات مربوطه را در آن قرار دهید. در ادامه یک نمونه مستندات برای این کار آورده شده است:
-
----
 
 # Setup Pre-Commit Hook for Code Formatting
 
