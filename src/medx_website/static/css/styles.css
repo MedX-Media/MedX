@@ -1,636 +1,640 @@
 /* فونت‌ها */
 @font-face {
-    font-family: 'Estedad-Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: url('../fonts/Estedad-Regular.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/Estedad-Regular.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
-         url('../fonts/Estedad-Regular.woff2') format("woff2"), /* Super Modern Browsers */
-         url('../fonts/Estedad-Regular.woff') format("woff"), /* Modern Browsers */
-         url('../fonts/Estedad-Regular.ttf') format("truetype"); /* Safari, Android, iOS */
+  font-family: "Estedad-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Estedad-Regular.eot"); /* IE9 Compat Modes */
+  src:
+    url("../fonts/Estedad-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/Estedad-Regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/Estedad-Regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/Estedad-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
 }
 
 /* استایل‌های عمومی */
 body {
-    font-family: 'Estedad', 'Estedad-Regular' !important;
-    direction: rtl; /* جهت نمایش از راست به چپ */
-    text-align: right; /* تراز راست */
+  font-family: "Estedad", "Estedad-Regular" !important;
+  direction: rtl; /* جهت نمایش از راست به چپ */
+  text-align: right; /* تراز راست */
 }
 
 /* استایل‌های هدر */
 header {
-    position: relative;
-    padding: 10px;
+  position: relative;
+  padding: 10px;
 }
 
 .navbar-brand img {
-    height: 50px;
+  height: 50px;
 }
 
 /* چینش افقی آیتم‌های منو */
 .navbar-nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .nav-icon {
-    margin-left: 0;
-    margin-right: auto;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 /* فضای بین آیتم‌های منو */
 .navbar-nav .nav-item {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 /* لینک‌های منو */
 .navbar-nav .nav-link {
-    color: #EEEEEE;
+  color: #eeeeee;
 }
 
 /* اندازه آیکون‌های لینک */
 .navbar-nav .nav-link i {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 /* استایل دکمه navbar-toggler */
 .navbar-toggler {
-    border: none; /* حذف حاشیه دکمه */
-    position: absolute; /* قرار دادن در موقعیت مطلق */
-    top: 50%; /* قرار دادن در وسط عمودی صفحه */
-    left: 10px; /* فاصله از سمت چپ هدر */
-    transform: translateY(-50%); /* جابه‌جا کردن دکمه به وسط عمودی */
-    z-index: 9999; /* قرار دادن در بالای دیگر عناصر */
-    background-color: transparent; /* پس‌زمینه شفاف برای دکمه */
-    color: #EEEEEE;
+  border: none; /* حذف حاشیه دکمه */
+  position: absolute; /* قرار دادن در موقعیت مطلق */
+  top: 50%; /* قرار دادن در وسط عمودی صفحه */
+  left: 10px; /* فاصله از سمت چپ هدر */
+  transform: translateY(-50%); /* جابه‌جا کردن دکمه به وسط عمودی */
+  z-index: 9999; /* قرار دادن در بالای دیگر عناصر */
+  background-color: transparent; /* پس‌زمینه شفاف برای دکمه */
+  color: #eeeeee;
 }
 
 /* استایل‌های منوی کشویی */
 .side-menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 250px;
-    height: 100%;
-    transition: left 0.3s ease;
-    z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  transition: left 0.3s ease;
+  z-index: 9999;
 }
 .side-menu.open {
-    left: 0;
+  left: 0;
 }
 .side-menu .menu-content {
-    position: relative;
-    height: 100%;
-    background-color: #222831;
-    color: #EEEEEE;
-    padding: 20px;
+  position: relative;
+  height: 100%;
+  background-color: #222831;
+  color: #eeeeee;
+  padding: 20px;
 }
 .side-menu .menu-content .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    color: #EEEEEE;
-    cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #eeeeee;
+  cursor: pointer;
 }
 .side-menu .menu-content ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 50px;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 50px;
 }
 .side-menu .menu-content ul li {
-    margin: 15px auto;
+  margin: 15px auto;
 }
 .side-menu .menu-content ul li a {
-    color: #EEEEEE;
-    text-decoration: none;
-    font-size: 18px;
+  color: #eeeeee;
+  text-decoration: none;
+  font-size: 18px;
 }
 .side-menu .menu-content ul li a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* استایل‌های فوتر */
 footer {
-    background-color: #222831;
-    color: #EEEEEE;
-    padding: 20px 0;
+  background-color: #222831;
+  color: #eeeeee;
+  padding: 20px 0;
 }
 
 /* لوگوی فوتر */
 .footer-logo {
-    max-width: 150px;
+  max-width: 150px;
 }
 
 .footer-description {
-    text-align: justify;
-    direction: rtl;
-    margin: 10px 0;
+  text-align: justify;
+  direction: rtl;
+  margin: 10px 0;
 }
 
 /* فهرست لینک‌های فوتر */
 .footer-nav {
-    margin: 10px auto;
-    padding: 0px;
-    list-style-type: none;
+  margin: 10px auto;
+  padding: 0px;
+  list-style-type: none;
 }
 
 .footer-nav .nav-item {
-    margin-bottom: 2px;
+  margin-bottom: 2px;
 }
 
 /* لینک‌های فوتر */
 .footer-nav .nav-link {
-    color: #EEEEEE;
-    text-decoration: none;
-    display: block;
+  color: #eeeeee;
+  text-decoration: none;
+  display: block;
 }
 
 /* استایل‌های فرم خبرنامه */
 .newsletter-container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 10px auto;
 }
 
 .newsletter-form {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
 }
 
 /* ایمیل فرم خبرنامه */
 .newsletter-email {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: 0;
-    flex: 1;
-    height: 60px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: 0;
+  flex: 1;
+  height: 60px;
 }
 
 /* دکمه ارسال خبرنامه */
 .newsletter-btn {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    padding: 10px 20px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 10px 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* استایل‌های پست‌ها */
 .post-detail {
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .featured-image {
-    object-fit: cover;
-    border-radius: 5px;
-    width: 100%;
-    aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
 .author-info {
-    display: flex;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 15px;
 }
 
 .author-image {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
 }
 
 .post-meta {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .post-content {
-    max-width: 800px;
-    margin: 20px auto; /* مرکز کردن محتوا */
-    padding: 0 15px; /* برای ایجاد فاصله‌ی مناسب در صفحات کوچکتر */
-    text-align: justify;
+  max-width: 800px;
+  margin: 20px auto; /* مرکز کردن محتوا */
+  padding: 0 15px; /* برای ایجاد فاصله‌ی مناسب در صفحات کوچکتر */
+  text-align: justify;
 }
 
-.post-content p img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.post-content p img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* دکمه‌های شبکه‌های اجتماعی */
 .social-share {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .social-buttons {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    background-color: #333;
-    transition: background-color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: #333;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
 }
 
 /* هاور روی دکمه‌های اجتماعی */
 .social-btn:hover {
-    background-color: #555;
-    transform: scale(1.1);
+  background-color: #555;
+  transform: scale(1.1);
 }
 
 /* رنگ شبکه‌های اجتماعی */
 .social-btn.telegram {
-    background-color: #0088cc;
+  background-color: #0088cc;
 }
 
 .social-btn.linkedin {
-    background-color: #0077b5;
+  background-color: #0077b5;
 }
 
 .social-btn.twitter {
-    background-color: #1da1f2;
+  background-color: #1da1f2;
 }
 
 .social-btn.instagram {
-    background-color: #e4405f;
+  background-color: #e4405f;
 }
 
 .social-btn.print {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 .divider {
-    border: none;
-    border-top: 3px solid #000;
-    margin: 20px 0;
+  border: none;
+  border-top: 3px solid #000;
+  margin: 20px 0;
 }
 
 /* استایل‌های آخرین پست‌ها */
 .latest-posts {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-right: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-right: 0;
 }
 
 .list-group-item {
-    display: flex;
-    border: none;
-    padding: 10px 0;
+  display: flex;
+  border: none;
+  padding: 10px 0;
 }
 
-.latest-post-thumbnail{
-    max-width: 20%;
-    height: auto;
+.latest-post-thumbnail {
+  max-width: 20%;
+  height: auto;
 }
 
-.latest-post-thumbnail img{
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
-    border-radius: 5px;
-    object-fit: cover;
-    margin-left: 10px;
+.latest-post-thumbnail img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-left: 10px;
 }
 
 .latest-post-title {
-    margin-right: 10px;
-    font-size: 1.1em;
-    margin-bottom: 5px;
+  margin-right: 10px;
+  font-size: 1.1em;
+  margin-bottom: 5px;
 }
 
 .latest-post-title a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .latest-post-meta {
-    margin-right: 10px;
-    font-size: 0.9em;
-    color: #555;
+  margin-right: 10px;
+  font-size: 0.9em;
+  color: #555;
 }
 
 /* استایل‌های صفحه اصلی */
 .home-content {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 /* استایل پست‌های ویژه */
 .home-featured-post {
-    position: relative;
-    border-radius: 5px;
-    overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .home-featured-post-image {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-    border-radius: 5px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .home-featured-post-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .home-featured-post-overlay {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .home-featured-post-overlay-content {
-    text-align: right;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+  text-align: right;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
-.home-featured-post-link{
-    text-decoration: none;
-    color: #EEEEEE;
+.home-featured-post-link {
+  text-decoration: none;
+  color: #eeeeee;
 }
 
 /* پست‌های آخر صفحه اصلی */
 .home-latest-posts {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .home-latest-post {
-    padding: 50px;
+  padding: 50px;
 }
 
 .home-latest-post-image {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-    border-radius: 10px;
-    object-fit: cover;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
-.home-latest-post-content{
-    margin-top: 15px;
-    margin-right: 15px;
+.home-latest-post-content {
+  margin-top: 15px;
+  margin-right: 15px;
 }
 
 .home-latest-post-title {
-    font-size: 1.1em;
-    margin-bottom: 5px;
+  font-size: 1.1em;
+  margin-bottom: 5px;
 }
 
 .home-latest-post-title a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .home-latest-post-meta {
-    font-size: 0.9em;
-    color: #555;
+  font-size: 0.9em;
+  color: #555;
 }
 
 /* پست‌های محبوب صفحه اصلی */
 .home-popular-posts {
-    margin-top: 0px;
-    padding: 0 10px;
+  margin-top: 0px;
+  padding: 0 10px;
 }
 
 .home-popular-list-group-item {
-    list-style-type: none;
-    border: none;
-    padding: 10px 0;
+  list-style-type: none;
+  border: none;
+  padding: 10px 0;
 }
 
 .home-popular-post-title {
-    font-size: 1.1em;
-    margin-bottom: 5px;
+  font-size: 1.1em;
+  margin-bottom: 5px;
 }
 
 .home-popular-post-title a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .home-popular-post-meta {
-    font-size: 0.9em;
-    color: #555;
+  font-size: 0.9em;
+  color: #555;
 }
 
 /* استایل‌های pagination */
 .pagination {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 20px 0;
 }
 
 .pagination .page-item {
-    margin: 0 5px;
+  margin: 0 5px;
 }
 
 .pagination .page-link {
-    border-radius: 5px;
-    padding: 0.5em 0.75em;
-    border: 1px solid #dee2e6;
-    color: #007bff;
-    text-decoration: none;
+  border-radius: 5px;
+  padding: 0.5em 0.75em;
+  border: 1px solid #dee2e6;
+  color: #007bff;
+  text-decoration: none;
 }
 
 .pagination .page-link:hover {
-    background-color: #007bff;
-    color: #fff;
+  background-color: #007bff;
+  color: #fff;
 }
 
 .pagination .page-item.active .page-link {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #007bff;
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
 }
 
 /* استایل‌های ریسپانسیو */
 
 /* برای صفحه‌های با عرض کمتر از 768 پیکسل */
 @media (max-width: 768px) {
-    /* تغییر چینش آیتم‌های منو */
-    .navbar-nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  /* تغییر چینش آیتم‌های منو */
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    /* تغییرات در فوتر */
-    .footer-logo {
-        max-width: 100px;
-    }
+  /* تغییرات در فوتر */
+  .footer-logo {
+    max-width: 100px;
+  }
 
-    .footer-nav {
-        text-align: center;
-    }
+  .footer-nav {
+    text-align: center;
+  }
 
-    .footer-description {
-        margin-top: 10px;
-    }
+  .footer-description {
+    margin-top: 10px;
+  }
 
-    /* تغییر چینش فرم خبرنامه */
-    .newsletter-form {
-        width: 100%;
-    }
+  /* تغییر چینش فرم خبرنامه */
+  .newsletter-form {
+    width: 100%;
+  }
 
-    /* تغییر اندازه تصاویر پست */
-    .featured-image, 
-    .home-featured-post-image img {
-        aspect-ratio: auto;
-        height: auto;
-        width: 100%;
-    }
+  /* تغییر اندازه تصاویر پست */
+  .featured-image,
+  .home-featured-post-image img {
+    aspect-ratio: auto;
+    height: auto;
+    width: 100%;
+  }
 
-    .home-latest-posts{
-        padding: 0 20px;
-    }
+  .home-latest-posts {
+    padding: 0 20px;
+  }
 
-    .home-popular-posts {
-        margin-top: 10px;
-    }
+  .home-popular-posts {
+    margin-top: 10px;
+  }
 
-    /* استایل‌های آخرین پست‌ها */
-    .latest-post-thumbnail {
-        max-width: 33%; /* تغییر اندازه تصویر به 100% از عرض عنصر مادر */
-        height: auto; /* حفظ نسبت تصویر */
-    }
+  /* استایل‌های آخرین پست‌ها */
+  .latest-post-thumbnail {
+    max-width: 33%; /* تغییر اندازه تصویر به 100% از عرض عنصر مادر */
+    height: auto; /* حفظ نسبت تصویر */
+  }
 
-    .latest-post-thumbnail img{
-        width: 100%; /* تغییر اندازه تصویر به 100% از عرض عنصر مادر */
-        height: auto; /* حفظ نسبت تصویر */
-        max-width: 100%; /* جلوگیری از بزرگتر شدن تصویر از عرض ستون */
-        object-fit: cover; /* اطمینان از پوشش مناسب تصویر */
-    }
+  .latest-post-thumbnail img {
+    width: 100%; /* تغییر اندازه تصویر به 100% از عرض عنصر مادر */
+    height: auto; /* حفظ نسبت تصویر */
+    max-width: 100%; /* جلوگیری از بزرگتر شدن تصویر از عرض ستون */
+    object-fit: cover; /* اطمینان از پوشش مناسب تصویر */
+  }
 
-    /* تنظیمات برای کوچک‌تر شدن متن‌ها و چیدمان‌ها */
-    .post-detail {
-        margin: 20px auto;
-        padding: 0 10px;
-    }
+  /* تنظیمات برای کوچک‌تر شدن متن‌ها و چیدمان‌ها */
+  .post-detail {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
 
-    .author-info {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .author-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .author-image {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
+  .author-image {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
 
-    .pagination {
-        align-items: center;
-    }
+  .pagination {
+    align-items: center;
+  }
 }
 
 /* برای صفحه‌های با عرض کمتر از 480 پیکسل */
 @media (max-width: 480px) {
-    /* تغییر بیشتر در استایل فوتر */
-    .footer-logo {
-        max-width: 80px;
-    }
+  /* تغییر بیشتر در استایل فوتر */
+  .footer-logo {
+    max-width: 80px;
+  }
 
-    /* چینش کامل منو به صورت عمودی */
-    .navbar-nav {
-        align-items: flex-start;
-    }
+  /* چینش کامل منو به صورت عمودی */
+  .navbar-nav {
+    align-items: flex-start;
+  }
 
-    /* کوچک‌تر شدن متن‌ها و عناصر صفحه */
-    .home-content {
-        margin: 10px;
-    }
+  /* کوچک‌تر شدن متن‌ها و عناصر صفحه */
+  .home-content {
+    margin: 10px;
+  }
 
-    .post-detail {
-        padding: 0 5px;
-    }
+  .post-detail {
+    padding: 0 5px;
+  }
 
-    .pagination .page-link {
-        padding: 0.5em 0.5em;
-    }
+  .pagination .page-link {
+    padding: 0.5em 0.5em;
+  }
 }
 
 /* Wrapper برای بلوک کد و دکمه کپی */
 .code-wrapper {
-    position: relative;
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
-    overflow-x: auto;
-    display: flex;
-    justify-content: flex-end; /* به صورت پیش‌فرض چپ‌چین */
-    flex-direction: column; /* برای اینکه دکمه بالا و کد زیر آن باشد */
-    align-items: flex-start; /* در حالت پیش‌فرض، دکمه کپی سمت راست باشد */
+  position: relative;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+  display: flex;
+  justify-content: flex-end; /* به صورت پیش‌فرض چپ‌چین */
+  flex-direction: column; /* برای اینکه دکمه بالا و کد زیر آن باشد */
+  align-items: flex-start; /* در حالت پیش‌فرض، دکمه کپی سمت راست باشد */
 }
 
 /* دکمه کپی */
 .copy-code-btn {
-    align-self: flex-end; /* در حالت چپ‌چین، دکمه در سمت راست قرار بگیرد */
-    background-color: #e2e8f0;
-    border: none;
-    padding: 5px 10px;
-    color: #333;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    font-family: Arial, sans-serif;
-    margin-bottom: 10px;
+  align-self: flex-end; /* در حالت چپ‌چین، دکمه در سمت راست قرار بگیرد */
+  background-color: #e2e8f0;
+  border: none;
+  padding: 5px 10px;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
 }
 
 /* استایل برای دکمه کپی در حالت hover */
 .copy-code-btn:hover {
-    background-color: #cbd5e0;
+  background-color: #cbd5e0;
 }
 
 /* استایل برای متن بلوک کد */
 pre {
-    color: #333;
-    padding: 0;
-    margin: 0;
-    border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace;
-    white-space: pre-wrap; /* برای شکستن خطوط طولانی */
-    word-break: break-word;
-    text-align: inherit; /* تراز متن بر اساس والد */
-    width: 100%;
+  color: #333;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre-wrap; /* برای شکستن خطوط طولانی */
+  word-break: break-word;
+  text-align: inherit; /* تراز متن بر اساس والد */
+  width: 100%;
 }

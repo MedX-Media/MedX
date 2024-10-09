@@ -9,30 +9,40 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('blog', '0001_initial'),
+        ("blog", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Tag',
+            name="Tag",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100, unique=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100, unique=True)),
             ],
         ),
         migrations.AlterField(
-            model_name='post',
-            name='content',
+            model_name="post",
+            name="content",
             field=ckeditor.fields.RichTextField(),
         ),
         migrations.AlterField(
-            model_name='post',
-            name='publish_date',
-            field=django_jalali.db.models.jDateTimeField(default=django.utils.timezone.now),
+            model_name="post",
+            name="publish_date",
+            field=django_jalali.db.models.jDateTimeField(
+                default=django.utils.timezone.now
+            ),
         ),
         migrations.AddField(
-            model_name='post',
-            name='tags',
-            field=models.ManyToManyField(blank=True, to='blog.tag'),
+            model_name="post",
+            name="tags",
+            field=models.ManyToManyField(blank=True, to="blog.tag"),
         ),
     ]
