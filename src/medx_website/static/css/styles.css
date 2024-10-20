@@ -547,13 +547,20 @@ footer {
     }
 
     .author-info {
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex;
+        align-items: center;
+        margin-top: 10px; /* کاهش فاصله بالا */
+        margin-bottom: 10px; /* کاهش فاصله پایین */
     }
 
     .author-image {
-        margin-left: 0;
-        margin-bottom: 10px;
+        width: 40px; /* تنظیم سایز تصویر در حالت موبایل */
+        height: 40px;
+        margin-left: 10px; /* فاصله مناسب بین تصویر و نام */
+    }
+
+    .post-detail h1 {
+        margin-bottom: 10px; /* کاهش فاصله بین عنوان و بخش نویسنده */
     }
 
     .pagination {
