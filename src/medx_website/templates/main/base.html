@@ -3,6 +3,14 @@
 <head>
     {% load static %}
     {% load custom_filters %}
+
+	<!-- Open Graph meta tags -->
+    <meta property="og:title" content="{% block og_title %}Your Default Title{% endblock %}" />
+    <meta property="og:description" content="{% block og_description %}Default description of the website{% endblock %}" />
+    <meta property="og:image" content="{% block og_image %}{{ static 'static/images/medx_logo.png' }}{% endblock %}" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Medx{% endblock %}</title>

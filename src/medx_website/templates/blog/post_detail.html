@@ -4,6 +4,11 @@
 
 {% block title %}{{ post.title }} - Medx{% endblock %}  <!-- Sets the title of the page to the post's title -->
 
+{% block og_title %}{{ post.title }}{% endblock %}
+{% block og_description %}{{ post.excerpt }}{% endblock %}
+{% block og_image %}{{ post.featured_image.url }}{% endblock %}
+{% block og_type %}article{% endblock %}
+
 {% block content %}
 <div class="post-detail">  <!-- Main container for post detail -->
     <div class="row mb-1">  <!-- Row for the post header information -->
