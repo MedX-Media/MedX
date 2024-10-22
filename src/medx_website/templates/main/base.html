@@ -3,6 +3,14 @@
 <head>
     {% load static %}
     {% load custom_filters %}
+
+	<!-- Open Graph meta tags -->
+    <meta property="og:title" content="{% block og_title %}Your Default Title{% endblock %}" />
+    <meta property="og:description" content="{% block og_description %}Default description of the website{% endblock %}" />
+    <meta property="og:image" content="{% block og_image %}{{ static 'static/images/medx_logo.png' }}{% endblock %}" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Medx{% endblock %}</title>
@@ -18,18 +26,18 @@
     <script src="{% static 'js/custom.js' %}"></script>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header style="background-color: #222831; color: #EEEEEE;">
         <nav class="navbar navbar-expand-lg container">
             <a class="navbar-brand" href="{% url 'home' %}">
                 <img src="{% static 'images/medx_logo.png' %}" alt="Logo">
             </a>
-            <!-- دکمه Toggle برای صفحه‌های کوچک -->
+            <!-- Toggle button for small screens -->
             <button class="navbar-toggler" type="button" id="menu-toggle">
                 <span>&#9776;</span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- آیتم‌های منو -->
+                <!-- Menu items -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'home' %}">خانه</a>
@@ -52,7 +60,7 @@
         </nav>
     </header>    
 
-    <!-- منوی کشویی -->
+    <!-- Side Menu -->
     <div class="side-menu" id="side-menu">
         <div class="menu-content">
             <span class="close-btn" id="close-menu">&times;</span>
@@ -63,7 +71,7 @@
         </div>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Content Area -->
     <div class="container convert-to-persian">
         {% block content %}
         {% endblock %}
@@ -99,20 +107,22 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
+    <!-- jQuery Script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Toggle menu
+        // Toggle the side menu
         document.getElementById('menu-toggle').addEventListener('click', function() {
             document.getElementById('side-menu').classList.toggle('open');
         });
 
-        // Close menu
+        // Close the side menu
         document.getElementById('close-menu').addEventListener('click', function() {
             document.getElementById('side-menu').classList.remove('open');
         });
+
+        // Handle newsletter form submission
         function handleFormSubmit() {
             const pageReloaded = localStorage.getItem('pageReloaded');
             if (!pageReloaded) {
@@ -123,30 +133,31 @@
             }
         }
 
+        // Remove the page reload indicator on window load
         window.onload = function() {
             localStorage.removeItem('pageReloaded');
         };
 
+        // Add copy button to code blocks
         document.addEventListener("DOMContentLoaded", function() {
-            // پیدا کردن تمام عناصر <pre><code> و اضافه کردن دکمه کپی
             const codeBlocks = document.querySelectorAll("pre code");
         
             codeBlocks.forEach((block) => {
-                // ساختن دکمه کپی
+                // Create a copy button
                 const copyButton = document.createElement("button");
                 copyButton.innerHTML = "Copy";
                 copyButton.className = "copy-code-btn";
                 
-                // ساختن یک div برای بسته‌بندی کد و دکمه
+                // Create a div to wrap the code and button
                 const codeWrapper = document.createElement("div");
                 codeWrapper.className = "code-wrapper";
         
-                // اضافه کردن بلوک کد و دکمه به wrapper
+                // Add the code block and button to the wrapper
                 block.parentElement.insertBefore(codeWrapper, block);
                 codeWrapper.appendChild(block.parentElement.removeChild(block));
                 codeWrapper.appendChild(copyButton);
         
-                // وقتی دکمه کپی کلیک شد
+                // When the copy button is clicked
                 copyButton.addEventListener("click", () => {
                     const range = document.createRange();
                     range.selectNodeContents(block);

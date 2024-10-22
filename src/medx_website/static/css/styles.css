@@ -1,8 +1,9 @@
 /* فونت‌ها */
+/* Define custom font-face for Estedad-Regular */
 @font-face {
-    font-family: 'Estedad-Regular';
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Estedad-Regular';  /* Name of the font */
+    font-style: normal;  /* Normal font style */
+    font-weight: normal;  /* Normal font weight */
     src: url('../fonts/Estedad-Regular.eot'); /* IE9 Compat Modes */
     src: url('../fonts/Estedad-Regular.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
          url('../fonts/Estedad-Regular.woff2') format("woff2"), /* Super Modern Browsers */
@@ -11,539 +12,654 @@
 }
 
 /* استایل‌های عمومی */
+/* General styles for the body */
 body {
-    font-family: 'Estedad', 'Estedad-Regular' !important;
-    direction: rtl; /* جهت نمایش از راست به چپ */
-    text-align: right; /* تراز راست */
+    font-family: 'Estedad', 'Estedad-Regular' !important;  /* Apply the custom font */
+    direction: rtl; /* Set text direction to right-to-left */
+    text-align: right; /* Align text to the right */
 }
 
 /* استایل‌های هدر */
+/* Styles for the header section */
 header {
-    position: relative;
-    padding: 10px;
+    position: relative; /* Positioning context for child elements */
+    padding: 10px; /* Padding around header content */
 }
 
 .navbar-brand img {
-    height: 50px;
+    height: 50px; /* Set height for brand logo */
 }
 
 /* چینش افقی آیتم‌های منو */
+/* Arrange menu items horizontally */
 .navbar-nav {
-    display: flex;
-    align-items: center;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
 }
 
 .nav-icon {
-    margin-left: 0;
-    margin-right: auto;
+    margin-left: 0; /* Remove left margin */
+    margin-right: auto; /* Push the icon to the left */
 }
 
 /* فضای بین آیتم‌های منو */
+/* Space between menu items */
 .navbar-nav .nav-item {
-    margin: 0 10px;
+    margin: 0 10px; /* Horizontal margin for items */
 }
 
 /* لینک‌های منو */
+/* Styles for menu links */
 .navbar-nav .nav-link {
-    color: #EEEEEE;
+    color: #EEEEEE; /* Text color for links */
 }
 
 /* اندازه آیکون‌های لینک */
+/* Size of the icons within links */
 .navbar-nav .nav-link i {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Font size for icons */
 }
 
 /* استایل دکمه navbar-toggler */
+/* Styles for the navbar toggler button */
 .navbar-toggler {
-    border: none; /* حذف حاشیه دکمه */
-    position: absolute; /* قرار دادن در موقعیت مطلق */
-    top: 50%; /* قرار دادن در وسط عمودی صفحه */
-    left: 10px; /* فاصله از سمت چپ هدر */
-    transform: translateY(-50%); /* جابه‌جا کردن دکمه به وسط عمودی */
-    z-index: 9999; /* قرار دادن در بالای دیگر عناصر */
-    background-color: transparent; /* پس‌زمینه شفاف برای دکمه */
-    color: #EEEEEE;
+    border: none; /* Remove button border */
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Center vertically */
+    left: 10px; /* Distance from left of the header */
+    transform: translateY(-50%); /* Adjust position to center */
+    z-index: 9999; /* Ensure button is above other elements */
+    background-color: transparent; /* Transparent background */
+    color: #EEEEEE; /* Text color */
 }
 
 /* استایل‌های منوی کشویی */
+/* Styles for the side menu */
 .side-menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 250px;
-    height: 100%;
-    transition: left 0.3s ease;
-    z-index: 9999;
+    position: fixed; /* Fixed position for side menu */
+    top: 0; /* Align to the top */
+    left: -100%; /* Hide menu off-screen initially */
+    width: 250px; /* Set width of the side menu */
+    height: 100%; /* Full height */
+    transition: left 0.3s ease; /* Smooth transition for menu open/close */
+    z-index: 9999; /* Ensure menu is above other elements */
 }
+
 .side-menu.open {
-    left: 0;
+    left: 0; /* Move menu into view when open */
 }
+
 .side-menu .menu-content {
-    position: relative;
-    height: 100%;
-    background-color: #222831;
-    color: #EEEEEE;
-    padding: 20px;
+    position: relative; /* Positioning context for child elements */
+    height: 100%; /* Full height for content */
+    background-color: #222831; /* Background color of the menu */
+    color: #EEEEEE; /* Text color */
+    padding: 20px; /* Padding inside the menu */
 }
+
 .side-menu .menu-content .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    color: #EEEEEE;
-    cursor: pointer;
+    position: absolute; /* Positioning for close button */
+    top: 20px; /* Distance from top */
+    right: 20px; /* Distance from right */
+    font-size: 24px; /* Font size for close button */
+    color: #EEEEEE; /* Color for close button */
+    cursor: pointer; /* Pointer cursor on hover */
 }
+
 .side-menu .menu-content ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 50px;
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin-top: 50px; /* Top margin for spacing */
 }
+
+/* استایل‌های منوی کناری */
+/* Style for the list items in the side menu */
 .side-menu .menu-content ul li {
-    margin: 15px auto;
+    margin: 15px auto; /* Center list items with vertical margin */
 }
+
+/* استایل لینک‌های منوی کناری */
+/* Styles for links within the side menu list items */
 .side-menu .menu-content ul li a {
-    color: #EEEEEE;
-    text-decoration: none;
-    font-size: 18px;
+    color: #EEEEEE; /* Text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Font size for links */
 }
+
+/* استایل هاور برای لینک‌های منوی کناری */
+/* No text decoration on hover for side menu links */
 .side-menu .menu-content ul li a:hover {
-    text-decoration: none;
+    text-decoration: none; /* Maintain no underline on hover */
 }
 
 /* استایل‌های فوتر */
+/* Footer styles */
 footer {
-    background-color: #222831;
-    color: #EEEEEE;
-    padding: 20px 0;
+    background-color: #222831; /* Dark background color for the footer */
+    color: #EEEEEE; /* Light text color */
+    padding: 20px 0; /* Vertical padding in the footer */
 }
 
 /* لوگوی فوتر */
+/* Styles for the footer logo */
 .footer-logo {
-    max-width: 150px;
+    max-width: 150px; /* Maximum width for the logo */
 }
 
+/* توصیف فوتر */
+/* Styles for the footer description text */
 .footer-description {
-    text-align: justify;
-    direction: rtl;
-    margin: 10px 0;
+    text-align: justify; /* Justify text for readability */
+    direction: rtl; /* Set text direction to right-to-left */
+    margin: 10px 0; /* Vertical margin around the description */
 }
 
 /* فهرست لینک‌های فوتر */
+/* Styles for the footer navigation list */
 .footer-nav {
-    margin: 10px auto;
-    padding: 0px;
-    list-style-type: none;
+    margin: 10px auto; /* Center the footer nav */
+    padding: 0px; /* Remove padding */
+    list-style-type: none; /* Remove default list styles */
 }
 
 .footer-nav .nav-item {
-    margin-bottom: 2px;
+    margin-bottom: 2px; /* Vertical space between nav items */
 }
 
 /* لینک‌های فوتر */
+/* Styles for footer links */
 .footer-nav .nav-link {
-    color: #EEEEEE;
-    text-decoration: none;
-    display: block;
+    color: #EEEEEE; /* Light color for footer links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Display links as block elements */
 }
 
 /* استایل‌های فرم خبرنامه */
+/* Newsletter form container styles */
 .newsletter-container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    margin: 10px auto;
+    display: flex; /* Flexbox layout for the container */
+    flex-direction: column; /* Vertical stacking of elements */
+    align-items: stretch; /* Stretch items to fill the container */
+    margin: 10px auto; /* Center the container */
 }
 
+/* استایل‌های فرم خبرنامه */
+/* Styles for the newsletter form */
 .newsletter-form {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
+    display: flex; /* Flexbox layout for the form */
+    flex-direction: row; /* Horizontal arrangement of elements */
+    align-items: stretch; /* Stretch items to fill the form */
 }
 
 /* ایمیل فرم خبرنامه */
+/* Styles for the email input field in the newsletter */
 .newsletter-email {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: 0;
-    flex: 1;
-    height: 60px;
+    border-top-right-radius: 10px; /* Rounded corners */
+    border-bottom-right-radius: 10px; /* Rounded corners */
+    border-top-left-radius: 0; /* Square corner */
+    border-bottom-left-radius: 0; /* Square corner */
+    margin-left: 0; /* No left margin */
+    flex: 1; /* Flex-grow to fill available space */
+    height: 60px; /* Fixed height for the input */
 }
 
 /* دکمه ارسال خبرنامه */
+/* Styles for the newsletter submit button */
 .newsletter-btn {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    padding: 10px 20px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    border-top-left-radius: 10px; /* Rounded corners */
+    border-bottom-left-radius: 10px; /* Rounded corners */
+    border-top-right-radius: 0; /* Square corner */
+    border-bottom-right-radius: 0; /* Square corner */
+    padding: 10px 20px; /* Padding for the button */
+    height: 60px; /* Fixed height */
+    display: flex; /* Flexbox layout for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center text */
 }
 
 /* استایل‌های پست‌ها */
+/* Styles for individual post detail */
 .post-detail {
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 50px;
+    max-width: 800px; /* Max width for the post detail */
+    margin: 0 auto; /* Center the post detail */
+    margin-top: 50px; /* Top margin for spacing */
 }
 
+/* تصویر ویژه پست */
+/* Styles for the featured image of the post */
 .featured-image {
-    object-fit: cover;
-    border-radius: 5px;
-    width: 100%;
-    aspect-ratio: 1/1;
+    object-fit: cover; /* Cover the entire area of the image */
+    border-radius: 5px; /* Rounded corners for the image */
+    width: 100%; /* Full width */
+    aspect-ratio: 1/1; /* Maintain a square aspect ratio */
 }
 
+/* اطلاعات نویسنده */
+/* Styles for the author info section */
 .author-info {
-    display: flex;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 15px;
+    display: flex; /* Flexbox layout for author info */
+    align-items: center; /* Center vertically */
+    margin-top: 50px; /* Top margin for spacing */
+    margin-bottom: 15px; /* Bottom margin for spacing */
 }
 
+/* تصویر پروفایل نویسنده */
+/* Styles for the author's profile picture */
 .author-image {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
+    border-radius: 50%; /* Circular profile picture */
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    margin-left: 10px; /* Left margin */
 }
 
+/* متا دیتا پست */
+/* Styles for post metadata */
 .post-meta {
-    margin: 10px 0;
+    margin: 10px 0; /* Vertical margin for spacing */
 }
 
+/* محتوا پست */
+/* Styles for post content */
 .post-content {
-    max-width: 800px;
-    margin: 20px auto; /* مرکز کردن محتوا */
-    padding: 0 15px; /* برای ایجاد فاصله‌ی مناسب در صفحات کوچکتر */
-    text-align: justify;
+    max-width: 800px; /* Max width for the content */
+    margin: 20px auto; /* Center the content */
+    padding: 0 15px; /* Horizontal padding for spacing */
+    text-align: justify; /* Justify text for readability */
 }
 
-.post-content p img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+/* تصاویری داخل محتوا پست */
+/* Styles for images within post content */
+.post-content p img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area of the image */
 }
 
 /* دکمه‌های شبکه‌های اجتماعی */
+/* Styles for social share section */
 .social-share {
-    margin-top: 20px;
+    margin-top: 20px; /* Top margin for spacing */
 }
 
+/* دکمه‌های اشتراک گذاری در شبکه‌های اجتماعی */
+/* Flexbox layout for social buttons */
 .social-buttons {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    margin-top: 20px;
+    display: flex; /* Flexbox layout */
+    justify-content: flex-start; /* Align to the start */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Top margin for spacing */
 }
 
+/* استایل دکمه‌های اجتماعی */
+/* General styles for social buttons */
 .social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    background-color: #333;
-    transition: background-color 0.3s, transform 0.3s;
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    border-radius: 50%; /* Circular buttons */
+    color: #ffffff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size */
+    background-color: #333; /* Dark background for buttons */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
 }
 
 /* هاور روی دکمه‌های اجتماعی */
+/* Hover effects for social buttons */
 .social-btn:hover {
-    background-color: #555;
-    transform: scale(1.1);
+    background-color: #555; /* Darker background on hover */
+    transform: scale(1.1); /* Scale up on hover */
 }
 
 /* رنگ شبکه‌های اجتماعی */
+/* Specific background colors for each social button */
 .social-btn.telegram {
-    background-color: #0088cc;
+    background-color: #0088cc; /* Telegram color */
 }
 
 .social-btn.linkedin {
-    background-color: #0077b5;
+    background-color: #0077b5; /* LinkedIn color */
 }
 
 .social-btn.twitter {
-    background-color: #1da1f2;
+    background-color: #1da1f2; /* Twitter color */
 }
 
 .social-btn.instagram {
-    background-color: #e4405f;
+    background-color: #e4405f; /* Instagram color */
 }
 
 .social-btn.print {
-    background-color: #000000;
+    background-color: #000000; /* Black color for print button */
 }
 
+/* Divider style */
+/* Style for horizontal divider lines */
 .divider {
-    border: none;
-    border-top: 3px solid #000;
-    margin: 20px 0;
+    border: none; /* No borders on sides */
+    border-top: 3px solid #000; /* Solid black top border */
+    margin: 20px 0; /* Vertical margin for spacing */
 }
 
 /* استایل‌های آخرین پست‌ها */
+/* Styles for the latest posts section */
 .latest-posts {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-right: 0;
+    margin-top: 20px; /* Top margin for spacing */
+    margin-bottom: 20px; /* Bottom margin for spacing */
+    padding-right: 0; /* No padding on the right */
 }
 
+/* استایل‌های آیتم‌های لیست پست‌های آخرین */
+/* Styles for list group items in latest posts */
 .list-group-item {
-    display: flex;
-    border: none;
-    padding: 10px 0;
+    display: flex; /* Flexbox layout for list items */
+    border: none; /* No borders */
+    padding: 10px 0; /* Vertical padding for spacing */
 }
 
-.latest-post-thumbnail{
-    max-width: 20%;
-    height: auto;
+/* تصویر بندانگشتی آخرین پست */
+/* Styles for the latest post thumbnail */
+.latest-post-thumbnail {
+    max-width: 20%; /* Maximum width for the thumbnail */
+    height: auto; /* Automatic height based on aspect ratio */
 }
 
-.latest-post-thumbnail img{
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
-    border-radius: 5px;
-    object-fit: cover;
-    margin-left: 10px;
+/* تصویر بندانگشتی آخرین پست (عکس) */
+/* Styles for images within the latest post thumbnail */
+.latest-post-thumbnail img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 16/9; /* Aspect ratio for the image */
+    border-radius: 5px; /* Rounded corners for the image */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    margin-left: 10px; /* Left margin for spacing */
 }
 
+/* عنوان آخرین پست */
+/* Styles for the title of the latest post */
 .latest-post-title {
-    margin-right: 10px;
-    font-size: 1.1em;
-    margin-bottom: 5px;
+    margin-right: 10px; /* Right margin for spacing */
+    font-size: 1.1em; /* Font size for the title */
+    margin-bottom: 5px; /* Bottom margin for spacing */
 }
 
+/* لینک عنوان آخرین پست */
+/* Styles for links in the latest post title */
 .latest-post-title a {
-    color: #000;
-    text-decoration: none;
+    color: #000; /* Black color for the link */
+    text-decoration: none; /* Remove underline from link */
 }
 
+/* متا داده آخرین پست */
+/* Styles for metadata of the latest post */
 .latest-post-meta {
-    margin-right: 10px;
-    font-size: 0.9em;
-    color: #555;
+    margin-right: 10px; /* Right margin for spacing */
+    font-size: 0.9em; /* Smaller font size for metadata */
+    color: #555; /* Gray color for metadata */
 }
 
 /* استایل‌های صفحه اصلی */
+/* Main content styles */
 .home-content {
-    margin-top: 20px;
+    margin-top: 20px; /* Top margin for spacing */
 }
 
 /* استایل پست‌های ویژه */
+/* Styles for featured posts */
 .home-featured-post {
-    position: relative;
-    border-radius: 5px;
-    overflow: hidden;
+    position: relative; /* Positioning context for child elements */
+    border-radius: 5px; /* Rounded corners for the featured post */
+    overflow: hidden; /* Hide overflow of child elements */
 }
 
+/* تصویر پست ویژه */
+/* Styles for the featured post image */
 .home-featured-post-image {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-    border-radius: 5px;
+    position: relative; /* Positioning context for child elements */
+    width: 100%; /* Full width */
+    aspect-ratio: 16/9; /* Maintain aspect ratio */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 5px; /* Rounded corners for the image */
 }
 
+/* تصویر پست ویژه (عکس) */
+/* Styles for images in featured posts */
 .home-featured-post-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+    position: absolute; /* Absolute positioning for full coverage */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
 }
 
+/* لایه رویی پست ویژه */
+/* Styles for overlay on featured post */
 .home-featured-post-overlay {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border-radius: 10px;
+    position: absolute; /* Absolute positioning for overlay */
+    bottom: 0; /* Align to bottom */
+    right: 0; /* Align to right */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: #fff; /* White text color */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    padding: 10px; /* Padding for content inside the overlay */
+    border-radius: 10px; /* Rounded corners for the overlay */
 }
 
+/* محتوا لایه رویی پست ویژه */
+/* Styles for content inside the overlay of featured post */
 .home-featured-post-overlay-content {
-    text-align: right;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    text-align: right; /* Right-aligned text */
+    position: absolute; /* Positioning context for content */
+    bottom: 10px; /* Distance from bottom */
+    right: 10px; /* Distance from right */
 }
 
-.home-featured-post-link{
-    text-decoration: none;
-    color: #EEEEEE;
+/* لینک پست ویژه */
+/* Styles for links in featured posts */
+.home-featured-post-link {
+    text-decoration: none; /* Remove underline from links */
+    color: #EEEEEE; /* Light color for the link */
 }
 
 /* پست‌های آخر صفحه اصلی */
+/* Styles for the latest posts on the homepage */
 .home-latest-posts {
-    margin-top: 25px;
+    margin-top: 25px; /* Top margin for spacing */
 }
 
+/* استایل پست‌های آخر صفحه اصلی */
+/* Styles for individual latest posts on the homepage */
 .home-latest-post {
-    padding: 50px;
+    padding: 50px; /* Padding for spacing */
 }
 
+/* تصویر پست‌های آخر صفحه اصلی */
+/* Styles for images in latest posts on the homepage */
 .home-latest-post-image {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-    border-radius: 10px;
-    object-fit: cover;
+    position: relative; /* Positioning context for child elements */
+    width: 100%; /* Full width */
+    aspect-ratio: 16/9; /* Maintain aspect ratio */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners for the image */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
 }
 
-.home-latest-post-content{
-    margin-top: 15px;
-    margin-right: 15px;
+/* محتوا پست‌های آخر صفحه اصلی */
+/* Styles for content of latest posts on the homepage */
+.home-latest-post-content {
+    margin-top: 15px; /* Top margin for spacing */
+    margin-right: 15px; /* Right margin for spacing */
 }
 
+/* عنوان پست‌های آخر صفحه اصلی */
+/* Styles for the title of latest posts */
 .home-latest-post-title {
-    font-size: 1.1em;
-    margin-bottom: 5px;
+    font-size: 1.1em; /* Font size for the title */
+    margin-bottom: 5px; /* Bottom margin for spacing */
 }
 
+/* لینک عنوان پست‌های آخر صفحه اصلی */
+/* Styles for links in the title of latest posts */
 .home-latest-post-title a {
-    color: #000;
-    text-decoration: none;
+    color: #000; /* Black color for the link */
+    text-decoration: none; /* Remove underline from link */
 }
 
+/* متا داده پست‌های آخر صفحه اصلی */
+/* Styles for metadata of latest posts */
 .home-latest-post-meta {
-    font-size: 0.9em;
-    color: #555;
+    font-size: 0.9em; /* Smaller font size for metadata */
+    color: #555; /* Gray color for metadata */
 }
 
 /* پست‌های محبوب صفحه اصلی */
+/* Styles for popular posts on the homepage */
 .home-popular-posts {
-    margin-top: 0px;
-    padding: 0 10px;
+    margin-top: 0px; /* No top margin */
+    padding: 0 10px; /* Horizontal padding */
 }
 
+/* استایل‌های آیتم‌های پست‌های محبوب */
+/* Styles for popular post list group items */
 .home-popular-list-group-item {
-    list-style-type: none;
-    border: none;
-    padding: 10px 0;
+    list-style-type: none; /* No list styles */
+    border: none; /* No borders */
+    padding: 10px 0; /* Vertical padding for spacing */
 }
 
+/* عنوان پست‌های محبوب */
+/* Styles for the title of popular posts */
 .home-popular-post-title {
-    font-size: 1.1em;
-    margin-bottom: 5px;
+    font-size: 1.1em; /* Font size for the title */
+    margin-bottom: 5px; /* Bottom margin for spacing */
 }
 
+/* لینک عنوان پست‌های محبوب */
+/* Styles for links in the title of popular posts */
 .home-popular-post-title a {
-    color: #000;
-    text-decoration: none;
+    color: #000; /* Black color for the link */
+    text-decoration: none; /* Remove underline from link */
 }
 
+/* متا داده پست‌های محبوب */
+/* Styles for metadata of popular posts */
 .home-popular-post-meta {
-    font-size: 0.9em;
-    color: #555;
+    font-size: 0.9em; /* Smaller font size for metadata */
+    color: #555; /* Gray color for metadata */
 }
 
 /* استایل‌های pagination */
+/* Styles for pagination component */
 .pagination {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 20px 0;
+    display: flex; /* Flexbox layout for pagination */
+    justify-content: center; /* Center the pagination items */
+    padding: 0; /* No padding */
+    margin: 20px 0; /* Vertical margin for spacing */
 }
 
 .pagination .page-item {
-    margin: 0 5px;
+    margin: 0 5px; /* Horizontal margin between page items */
 }
 
 .pagination .page-link {
-    border-radius: 5px;
-    padding: 0.5em 0.75em;
-    border: 1px solid #dee2e6;
-    color: #007bff;
-    text-decoration: none;
+    border-radius: 5px; /* Rounded corners for pagination links */
+    padding: 0.5em 0.75em; /* Padding for clickable area */
+    border: 1px solid #dee2e6; /* Light border for links */
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Remove underline from links */
 }
 
+/* هاور روی لینک‌های صفحه‌بندی */
+/* Styles for pagination links on hover */
 .pagination .page-link:hover {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #007bff; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
 }
 
+/* لینک‌های صفحه‌بندی در حالت فعال */
+/* Styles for active pagination links */
 .pagination .page-item.active .page-link {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #007bff;
+    background-color: #007bff; /* Active background color */
+    color: #fff; /* Active text color */
+    border-color: #007bff; /* Active border color */
 }
 
 /* استایل‌های ریسپانسیو */
+/* Responsive styles */
 
 /* برای صفحه‌های با عرض کمتر از 768 پیکسل */
+/* Styles for screens smaller than 768px */
 @media (max-width: 768px) {
     /* تغییر چینش آیتم‌های منو */
+    /* Change menu item layout for mobile */
     .navbar-nav {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
     }
 
     /* تغییرات در فوتر */
+    /* Footer adjustments */
     .footer-logo {
-        max-width: 100px;
+        max-width: 100px; /* Limit logo size */
     }
 
     .footer-nav {
-        text-align: center;
+        text-align: center; /* Center-align footer navigation */
     }
 
     .footer-description {
-        margin-top: 10px;
+        margin-top: 10px; /* Margin for footer description */
     }
 
     /* تغییر چینش فرم خبرنامه */
+    /* Change newsletter form layout for mobile */
     .newsletter-form {
-        width: 100%;
+        width: 100%; /* Full width for form */
     }
 
     /* تغییر اندازه تصاویر پست */
+    /* Adjust featured images size */
     .featured-image, 
     .home-featured-post-image img {
-        aspect-ratio: auto;
-        height: auto;
-        width: 100%;
+        aspect-ratio: auto; /* Allow automatic aspect ratio */
+        height: auto; /* Automatic height */
+        width: 100%; /* Full width */
     }
 
-    .home-latest-posts{
-        padding: 0 20px;
+    /* Padding adjustment for latest posts */
+    .home-latest-posts {
+        padding: 0 20px; /* Horizontal padding */
     }
 
     .home-popular-posts {
-        margin-top: 10px;
+        margin-top: 10px; /* Margin for popular posts */
     }
 
     /* استایل‌های آخرین پست‌ها */
+    /* Styles for latest posts */
     .latest-post-thumbnail {
-        max-width: 33%; /* تغییر اندازه تصویر به 100% از عرض عنصر مادر */
-        height: auto; /* حفظ نسبت تصویر */
+        max-width: 33%; /* Adjust thumbnail size */
+        height: auto; /* Maintain aspect ratio */
     }
 
-    .latest-post-thumbnail img{
-        width: 100%; /* تغییر اندازه تصویر به 100% از عرض عنصر مادر */
-        height: auto; /* حفظ نسبت تصویر */
-        max-width: 100%; /* جلوگیری از بزرگتر شدن تصویر از عرض ستون */
-        object-fit: cover; /* اطمینان از پوشش مناسب تصویر */
+    .latest-post-thumbnail img {
+        width: 100%; /* Full width of thumbnail */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 100%; /* Prevent overflow */
+        object-fit: cover; /* Ensure proper image coverage */
     }
 
     /* تنظیمات برای کوچک‌تر شدن متن‌ها و چیدمان‌ها */
+    /* Adjustments for smaller text and layouts */
     .post-detail {
-        margin: 20px auto;
-        padding: 0 10px;
+        margin: 20px auto; /* Center post details */
+        padding: 0 10px; /* Padding for mobile */
     }
 
     .author-info {
@@ -564,72 +680,80 @@ footer {
     }
 
     .pagination {
-        align-items: center;
+        align-items: center; /* Center pagination items */
     }
 }
 
 /* برای صفحه‌های با عرض کمتر از 480 پیکسل */
+/* Styles for screens smaller than 480px */
 @media (max-width: 480px) {
     /* تغییر بیشتر در استایل فوتر */
+    /* Further adjustments for footer */
     .footer-logo {
-        max-width: 80px;
+        max-width: 80px; /* Limit logo size further */
     }
 
     /* چینش کامل منو به صورت عمودی */
+    /* Full vertical stacking for menu */
     .navbar-nav {
-        align-items: flex-start;
+        align-items: flex-start; /* Align items to the start */
     }
 
     /* کوچک‌تر شدن متن‌ها و عناصر صفحه */
+    /* Smaller text and element adjustments */
     .home-content {
-        margin: 10px;
+        margin: 10px; /* Margin for home content */
     }
 
     .post-detail {
-        padding: 0 5px;
+        padding: 0 5px; /* Reduced padding for mobile */
     }
 
     .pagination .page-link {
-        padding: 0.5em 0.5em;
+        padding: 0.5em 0.5em; /* Smaller padding for page links */
     }
 }
 
 /* Wrapper برای بلوک کد و دکمه کپی */
+/* Wrapper for code block and copy button */
 .code-wrapper {
-    position: relative;
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
-    overflow-x: auto;
-    display: flex;
-    justify-content: flex-end; /* به صورت پیش‌فرض چپ‌چین */
-    flex-direction: column; /* برای اینکه دکمه بالا و کد زیر آن باشد */
-    align-items: flex-start; /* در حالت پیش‌فرض، دکمه کپی سمت راست باشد */
+    position: relative; /* Positioning context */
+    background-color: #f5f5f5; /* Light gray background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Padding for content */
+    margin-bottom: 16px; /* Bottom margin for spacing */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    display: flex; /* Flexbox layout */
+    justify-content: flex-end; /* Right-align content */
+    flex-direction: column; /* Stack button and code vertically */
+    align-items: flex-start; /* Align items to the start */
 }
 
 /* دکمه کپی */
+/* Styles for the copy button */
 .copy-code-btn {
-    align-self: flex-end; /* در حالت چپ‌چین، دکمه در سمت راست قرار بگیرد */
-    background-color: #e2e8f0;
-    border: none;
-    padding: 5px 10px;
-    color: #333;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    font-family: Arial, sans-serif;
-    margin-bottom: 10px;
+    align-self: flex-end; /* Align copy button to the right */
+    background-color: #e2e8f0; /* Light background for button */
+    border: none; /* No border */
+    padding: 5px 10px; /* Padding for clickable area */
+    color: #333; /* Dark text color */
+    font-size: 14px; /* Font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background */
+    font-family: Arial, sans-serif; /* Font family for button text */
+    margin-bottom: 10px; /* Bottom margin for spacing */
 }
 
 /* استایل برای دکمه کپی در حالت hover */
+/* Styles for copy button on hover */
 .copy-code-btn:hover {
-    background-color: #cbd5e0;
+    background-color: #cbd5e0; /* Darker background on hover */
 }
 
 /* استایل برای متن بلوک کد */
+/* Styles for code block text */
 pre {
     color: #333;
     padding: 0;
