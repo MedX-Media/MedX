@@ -663,13 +663,20 @@ footer {
     }
 
     .author-info {
-        flex-direction: column; /* Stack author info vertically */
-        align-items: flex-start; /* Align to the start */
+        display: flex;
+        align-items: center;
+        margin-top: 10px; /* کاهش فاصله بالا */
+        margin-bottom: 10px; /* کاهش فاصله پایین */
     }
 
     .author-image {
-        margin-left: 0; /* Remove left margin */
-        margin-bottom: 10px; /* Bottom margin for spacing */
+        width: 40px; /* تنظیم سایز تصویر در حالت موبایل */
+        height: 40px;
+        margin-left: 10px; /* فاصله مناسب بین تصویر و نام */
+    }
+
+    .post-detail h1 {
+        margin-bottom: 10px; /* کاهش فاصله بین عنوان و بخش نویسنده */
     }
 
     .pagination {
@@ -748,13 +755,13 @@ footer {
 /* استایل برای متن بلوک کد */
 /* Styles for code block text */
 pre {
-    color: #333; /* Dark text color */
-    padding: 0; /* No padding */
-    margin: 0; /* No margin */
-    border-radius: 5px; /* Rounded corners */
-    font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
-    white-space: pre-wrap; /* Allow line wrapping for long lines */
-    word-break: break-word; /* Break words if necessary */
-    text-align: inherit; /* Inherit text alignment */
-    width: 100%; /* Full width */
+    color: #333;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap; /* برای شکستن خطوط طولانی */
+    word-break: break-word;
+    text-align: inherit; /* تراز متن بر اساس والد */
+    width: 100%;
 }
