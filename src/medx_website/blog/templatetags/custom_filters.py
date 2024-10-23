@@ -10,7 +10,7 @@ def persian_numbers(value):
     english_digits = "0123456789"  # English digit characters
     translation_table = str.maketrans(english_digits, persian_digits)  # Creating a translation table
     return str(value).translate(translation_table)  # Translating the input value to Persian digits
-
+    
 # Custom template filter to convert Gregorian dates to Jalali dates
 @register.filter(name='to_jalali')  # Registering the filter with a name
 def to_jalali(date):
@@ -20,18 +20,18 @@ def to_jalali(date):
 
         # Mapping Gregorian month names to Persian month names
         month_names = {
-            'Farvardin': 'فروردین',
-            'Ordibehesht': 'اردیبهشت',
-            'Khordad': 'خرداد',
-            'Tir': 'تیر',
-            'Mordad': 'مرداد',
-            'Shahrivar': 'شهریور',
-            'Mehr': 'مهر',
-            'Aban': 'آبان',
-            'Azar': 'آذر',
-            'Dey': 'دی',
-            'Bahman': 'بهمن',
-            'Esfand': 'اسفند'
+            "Farvardin": "فروردین",
+            "Ordibehesht": "اردیبهشت",
+            "Khordad": "خرداد",
+            "Tir": "تیر",
+            "Mordad": "مرداد",
+            "Shahrivar": "شهریور",
+            "Mehr": "مهر",
+            "Aban": "آبان",
+            "Azar": "آذر",
+            "Dey": "دی",
+            "Bahman": "بهمن",
+            "Esfand": "اسفند",
         }
 
         # Replacing the month name in the formatted date with its Persian equivalent

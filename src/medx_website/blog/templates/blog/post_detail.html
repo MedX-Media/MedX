@@ -1,3 +1,4 @@
+
 {% extends 'blog/base.html' %}  <!-- Extending the base layout of the blog -->
 {% load static %}  <!-- Loading static files -->
 {% load custom_filters %}  <!-- Loading custom template filters -->
@@ -26,9 +27,10 @@
     <div class="post-content">  
         {{ post.content|safe }}  <!-- Displaying the post content with safe filter to render HTML -->
     </div>
+  </div>
 
-    <!-- Horizontal Divider -->
-    <hr class="divider">
+  <!-- Post Content -->
+  <div class="post-content">{{ post.content|safe }}</div>
 
     <!-- Social Share Buttons -->
     <div class="social-share">  <!-- Container for social sharing options -->
@@ -41,9 +43,10 @@
             <a href="javascript:window.print()" class="social-btn print"><i class="fas fa-print"></i></a>  <!-- Print button -->
         </div>
     </div>
+  </div>
 
-    <!-- Horizontal Divider -->
-    <hr class="divider">
+  <!-- Horizontal Divider -->
+  <hr class="divider" />
 
     <!-- Latest Posts -->
     <div class="latest-posts">  <!-- Container for the latest posts section -->

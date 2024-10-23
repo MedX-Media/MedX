@@ -1,6 +1,6 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django_jalali.db import models as jmodels  # Importing Jalali date support
 from tinymce.models import HTMLField  # Importing HTML field for rich text editing
@@ -13,12 +13,14 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username  # Returns the username for string representation
 
+
 # Category model for categorizing posts
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)  # Category name must be unique
 
     def __str__(self):
         return self.name  # Returns the category name for string representation
+
 
 # Tag model for tagging posts
 class Tag(models.Model):

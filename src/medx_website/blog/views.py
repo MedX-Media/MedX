@@ -52,23 +52,26 @@ def home(request):
 
     # Context dictionary to pass data to the template
     context = {
-        'latest_post': latest_post,
-        'page_obj': page_obj,
-        'popular_posts': popular_posts,
+        "latest_post": latest_post,
+        "page_obj": page_obj,
+        "popular_posts": popular_posts,
     }
+    
     # Rendering the home page with the context data
     return render(request, 'main/home.html', context)
 
 def post_detail(request, slug):
     # Fetching the specific post by its slug or returning a 404 if not found
     post = get_object_or_404(Post, slug=slug)
+
     # Fetching the three latest posts for the sidebar or related posts section
     latest_posts = Post.objects.order_by('-publish_date')[:3]
 
     # Context dictionary to pass data to the template
     context = {
-        'post': post,
-        'latest_posts': latest_posts,
+        "post": post,
+        "latest_posts": latest_posts,
     }
+
     # Rendering the post detail page with the context data
     return render(request, 'blog/post_detail.html', context)
