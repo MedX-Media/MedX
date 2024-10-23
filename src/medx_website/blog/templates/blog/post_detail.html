@@ -1,44 +1,44 @@
-{% extends 'blog/base.html' %}
-{% load static %}
-{% load custom_filters %}
+{% extends 'blog/base.html' %}  <!-- Extending the base layout of the blog -->
+{% load static %}  <!-- Loading static files -->
+{% load custom_filters %}  <!-- Loading custom template filters -->
 
-{% block title %}{{ post.title }} - Medx{% endblock %}
+{% block title %}{{ post.title }} - Medx{% endblock %}  <!-- Setting the page title with the post title -->
 
 {% block content %}
-<div class="post-detail">
-    <div class="row mb-1">
-        <div class="col-md-8">
-            <h1>{{ post.title }}</h1>
-            <div class="author-info">
-                <img src="{{ post.author.userprofile.profile_picture.url }}" alt="Profile Picture" class="author-image">
-                <span>{{ post.author.first_name }} {{ post.author.last_name }}</span>
+<div class="post-detail">  <!-- Main container for post details -->
+    <div class="row mb-1">  <!-- Bootstrap row for layout -->
+        <div class="col-md-8">  <!-- Column for post title and author information -->
+            <h1>{{ post.title }}</h1>  <!-- Displaying the post title -->
+            <div class="author-info">  <!-- Container for author information -->
+                <img src="{{ post.author.userprofile.profile_picture.url }}" alt="Profile Picture" class="author-image">  <!-- Author's profile picture -->
+                <span>{{ post.author.first_name }} {{ post.author.last_name }}</span>  <!-- Author's name -->
             </div>
-            <div class="post-meta">
-                <span>{{ post.publish_date|to_jalali|persian_numbers }} | زمان مطالعه: {{ post.read_time|persian_numbers }} دقیقه</span>
+            <div class="post-meta">  <!-- Metadata for the post -->
+                <span>{{ post.publish_date|to_jalali|persian_numbers }} | زمان مطالعه: {{ post.read_time|persian_numbers }} دقیقه</span>  <!-- Displaying publish date in Jalali format and reading time in Persian digits -->
             </div>
         </div>
-        <div class="col-md-4">
-            <img src="{{ post.featured_image.url }}" alt="Featured Image" class="img-fluid featured-image">
+        <div class="col-md-4">  <!-- Column for the featured image -->
+            <img src="{{ post.featured_image.url }}" alt="Featured Image" class="img-fluid featured-image">  <!-- Displaying the featured image -->
         </div>
     </div>
 
     <!-- Post Content -->
-    <div class="post-content">
-        {{ post.content|safe }}
+    <div class="post-content">  
+        {{ post.content|safe }}  <!-- Displaying the post content with safe filter to render HTML -->
     </div>
 
     <!-- Horizontal Divider -->
     <hr class="divider">
 
     <!-- Social Share Buttons -->
-    <div class="social-share">
-        <h3>اشتراک گذاری</h3>
-        <div class="social-buttons">
-            <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}&text={{ post.title }}" target="_blank" class="social-btn telegram"><i class="fab fa-telegram-plane"></i></a>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ post.title }}" target="_blank" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/?url={{ request.build_absolute_uri }}" target="_blank" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
-            <a href="javascript:window.print()" class="social-btn print"><i class="fas fa-print"></i></a>
+    <div class="social-share">  <!-- Container for social sharing options -->
+        <h3>اشتراک گذاری</h3>  <!-- "Share" in Persian -->
+        <div class="social-buttons">  <!-- Container for social buttons -->
+            <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}&text={{ post.title }}" target="_blank" class="social-btn telegram"><i class="fab fa-telegram-plane"></i></a>  <!-- Telegram share button -->
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" target="_blank" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>  <!-- LinkedIn share button -->
+            <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ post.title }}" target="_blank" class="social-btn twitter"><i class="fab fa-twitter"></i></a>  <!-- Twitter share button -->
+            <a href="https://www.instagram.com/?url={{ request.build_absolute_uri }}" target="_blank" class="social-btn instagram"><i class="fab fa-instagram"></i></a>  <!-- Instagram share button -->
+            <a href="javascript:window.print()" class="social-btn print"><i class="fas fa-print"></i></a>  <!-- Print button -->
         </div>
     </div>
 
@@ -46,17 +46,17 @@
     <hr class="divider">
 
     <!-- Latest Posts -->
-    <div class="latest-posts">
-        <h3>آخرین مطالب</h3>
-        <ul class="list-group latest-posts">
-            {% for latest_post in latest_posts %}
-                <li class="list-group-item d-flex">
-                    <div class="col-md-2 p-0">
-                        <img src="{{ latest_post.featured_image.url }}" alt="Post Thumbnail" class="latest-post-thumbnail">
+    <div class="latest-posts">  <!-- Container for the latest posts section -->
+        <h3>آخرین مطالب</h3>  <!-- "Latest Posts" in Persian -->
+        <ul class="list-group latest-posts">  <!-- Unordered list for latest posts -->
+            {% for latest_post in latest_posts %}  <!-- Looping through the latest posts -->
+                <li class="list-group-item d-flex">  <!-- List item for each latest post -->
+                    <div class="col-md-2 p-0">  <!-- Column for post thumbnail -->
+                        <img src="{{ latest_post.featured_image.url }}" alt="Post Thumbnail" class="latest-post-thumbnail">  <!-- Displaying the post thumbnail -->
                     </div>
-                    <div class="col-md-10">
-                        <h4 class="latest-post-title"><a href="{% url 'post_detail' slug=latest_post.slug %}">{{ latest_post.title }}</a></h4>
-                        <span class="latest-post-meta">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.publish_date|to_jalali|persian_numbers }}</span>
+                    <div class="col-md-10">  <!-- Column for post title and metadata -->
+                        <h4 class="latest-post-title"><a href="{% url 'post_detail' slug=latest_post.slug %}">{{ latest_post.title }}</a></h4>  <!-- Post title linking to the post detail page -->
+                        <span class="latest-post-meta">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.publish_date|to_jalali|persian_numbers }}</span>  <!-- Displaying author and publish date for the latest post -->
                     </div>
                 </li>
             {% endfor %}
