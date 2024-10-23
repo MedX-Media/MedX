@@ -1,9 +1,18 @@
 <!doctype html>
 <html lang="fa">
-  <head>
-    {% load static %} {% load custom_filters %}
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    {% load static %}
+    {% load custom_filters %}
+
+	<!-- Open Graph meta tags -->
+    <meta property="og:title" content="{% block og_title %}Your Default Title{% endblock %}" />
+    <meta property="og:description" content="{% block og_description %}Default description of the website{% endblock %}" />
+    <meta property="og:image" content="{% block og_image %}{{ static 'static/images/medx_logo.png' }}{% endblock %}" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Medx{% endblock %}</title>
     <link
       rel="icon"
@@ -42,45 +51,43 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{% static 'js/custom.js' %}"></script>
-  </head>
-  <body>
-    <!-- Header -->
-    <header style="background-color: #222831; color: #eeeeee">
-      <nav class="navbar navbar-expand-lg container">
-        <a class="navbar-brand" href="{% url 'home' %}">
-          <img src="{% static 'images/medx_logo.png' %}" alt="Logo" />
-        </a>
-        <!-- دکمه Toggle برای صفحه‌های کوچک -->
-        <button class="navbar-toggler" type="button" id="menu-toggle">
-          <span>&#9776;</span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <!-- آیتم‌های منو -->
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">خانه</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/MedX-Media"
-                >مشارکت</a
-              >
-            </li>
-          </ul>
-          <div class="nav-icon">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+</head>
+<body>
+    <!-- Header Section -->
+    <header style="background-color: #222831; color: #EEEEEE;">
+        <nav class="navbar navbar-expand-lg container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'images/medx_logo.png' %}" alt="Logo">
+            </a>
+            <!-- Toggle button for small screens -->
+            <button class="navbar-toggler" type="button" id="menu-toggle">
+                <span>&#9776;</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Menu items -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/MedX-Media">مشارکت</a>
+                    </li>
+                </ul>
+                <div class="nav-icon">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>    
 
-    <!-- منوی کشویی -->
+    <!-- Side Menu -->
     <div class="side-menu" id="side-menu">
       <div class="menu-content">
         <span class="close-btn" id="close-menu">&times;</span>
@@ -91,7 +98,7 @@
       </div>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Content Area -->
     <div class="container convert-to-persian">
       {% block content %} {% endblock %}
     </div>
@@ -159,31 +166,30 @@
       </div>
     </footer>
 
-    <!-- jQuery -->
+    <!-- jQuery Script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      // Toggle menu
-      document
-        .getElementById("menu-toggle")
-        .addEventListener("click", function () {
-          document.getElementById("side-menu").classList.toggle("open");
+        // Toggle the side menu
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('side-menu').classList.toggle('open');
         });
 
-      // Close menu
-      document
-        .getElementById("close-menu")
-        .addEventListener("click", function () {
-          document.getElementById("side-menu").classList.remove("open");
+        // Close the side menu
+        document.getElementById('close-menu').addEventListener('click', function() {
+            document.getElementById('side-menu').classList.remove('open');
         });
-      function handleFormSubmit() {
-        const pageReloaded = localStorage.getItem("pageReloaded");
-        if (!pageReloaded) {
-          localStorage.setItem("pageReloaded", "true");
-          setTimeout(() => {
-            window.location.reload();
-          }, 100);
+
+        // Handle newsletter form submission
+        function handleFormSubmit() {
+            const pageReloaded = localStorage.getItem('pageReloaded');
+            if (!pageReloaded) {
+                localStorage.setItem('pageReloaded', 'true');
+                setTimeout(() => {
+                    window.location.reload();
+                }, 100);
+            }
         }
       }
 
@@ -204,25 +210,45 @@
           // ساختن یک div برای بسته‌بندی کد و دکمه
           const codeWrapper = document.createElement("div");
           codeWrapper.className = "code-wrapper";
+          
+        // Remove the page reload indicator on window load
+        window.onload = function() {
+            localStorage.removeItem('pageReloaded');
+        };
 
-          // اضافه کردن بلوک کد و دکمه به wrapper
-          block.parentElement.insertBefore(codeWrapper, block);
-          codeWrapper.appendChild(block.parentElement.removeChild(block));
-          codeWrapper.appendChild(copyButton);
-
-          // وقتی دکمه کپی کلیک شد
-          copyButton.addEventListener("click", () => {
-            const range = document.createRange();
-            range.selectNodeContents(block);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            document.execCommand("copy");
-            copyButton.innerHTML = "Copied!";
-            setTimeout(() => {
-              copyButton.innerHTML = "Copy";
-            }, 2000);
-          });
+        // Add copy button to code blocks
+        document.addEventListener("DOMContentLoaded", function() {
+            const codeBlocks = document.querySelectorAll("pre code");
+        
+            codeBlocks.forEach((block) => {
+                // Create a copy button
+                const copyButton = document.createElement("button");
+                copyButton.innerHTML = "Copy";
+                copyButton.className = "copy-code-btn";
+                
+                // Create a div to wrap the code and button
+                const codeWrapper = document.createElement("div");
+                codeWrapper.className = "code-wrapper";
+        
+                // Add the code block and button to the wrapper
+                block.parentElement.insertBefore(codeWrapper, block);
+                codeWrapper.appendChild(block.parentElement.removeChild(block));
+                codeWrapper.appendChild(copyButton);
+        
+                // When the copy button is clicked
+                copyButton.addEventListener("click", () => {
+                    const range = document.createRange();
+                    range.selectNodeContents(block);
+                    const selection = window.getSelection();
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                    document.execCommand("copy");
+                    copyButton.innerHTML = "Copied!";
+                    setTimeout(() => {
+                        copyButton.innerHTML = "Copy";
+                    }, 2000);
+                });
+            });
         });
       });
     </script>

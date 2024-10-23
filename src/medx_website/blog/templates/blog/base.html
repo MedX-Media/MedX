@@ -1,140 +1,77 @@
-<!doctype html>
-<html lang="fa">
-  <head>
-    {% load static %} {% load custom_filters %}
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %}Medx{% endblock %}</title>
-    <link
-      rel="icon"
-      href="{% static 'images/favicon.ico' %}"
-      type="image/x-icon"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="{% static 'images/apple-touch-icon.png' %}"
-    />
-    <link
-      rel="icon"
-      sizes="192x192"
-      href="{% static 'images/android-chrome-192x192.png' %}"
-    />
-    <link
-      rel="icon"
-      sizes="32x32"
-      href="{% static 'images/favicon-32x32.png' %}"
-    />
-    <link
-      rel="icon"
-      sizes="16x16"
-      href="{% static 'images/favicon-16x16.png' %}"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{% static 'js/custom.js' %}"></script>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="fa">  <!-- Setting the language of the document to Persian -->
+<head>
+    {% load static %}  <!-- Loading static files for the template -->
+    {% load custom_filters %}  <!-- Loading custom template filters -->
+    <meta charset="UTF-8">  <!-- Setting the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Responsive design settings -->
+    <title>{% block title %}Medx{% endblock %}</title>  <!-- Title of the document, can be overridden in child templates -->
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">  <!-- Favicon for the website -->
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">  <!-- Icon for Apple devices -->
+    <link rel="icon" sizes="192x192" href="{% static 'images/android-chrome-192x192.png' %}">  <!-- Icon for Android devices -->
+    <link rel="icon" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">  <!-- 32x32 icon -->
+    <link rel="icon" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">  <!-- 16x16 icon -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  <!-- Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">  <!-- Custom CSS file for additional styles -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  <!-- jQuery for JavaScript functionalities -->
+    <script src="{% static 'js/custom.js' %}"></script>  <!-- Custom JavaScript file -->
+</head>
+<body>
     <!-- Header -->
-    <header style="background-color: #222831; color: #eeeeee">
-      <nav class="navbar navbar-expand-lg container">
-        <a class="navbar-brand" href="{% url 'home' %}"
-          ><img src="{% static 'images/medx_logo.png' %}" alt="Logo"
-        /></a>
-        <div class="collapse navbar-collapse">
-          <div class="navbar-nav ml-auto">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">خانه</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://github.com/MedX-Media"
-                  >مشارکت</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="ml-auto">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <header style="background-color: #222831; color: #EEEEEE;">  <!-- Header section with background and text color -->
+        <nav class="navbar navbar-expand-lg container">  <!-- Navigation bar -->
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/medx_logo.png' %}" alt="Logo"></a>  <!-- Logo linking to the home page -->
+            <div class="collapse navbar-collapse">  <!-- Collapsible section for navigation items -->
+                <div class="navbar-nav ml-auto">  <!-- Left-aligned navigation items -->
+                    <ul class="navbar-nav">  <!-- Unordered list for navigation -->
+                        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">خانه</a></li>  <!-- Link to the home page -->
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/MedX-Media">مشارکت</a></li>  <!-- Link to GitHub for collaboration -->
+                    </ul>
+                </div>
+                <div class="ml-auto">  <!-- Right-aligned navigation items -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-search"></i></a></li>  <!-- Search icon -->
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user"></i></a></li>  <!-- User icon -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>    
 
     <!-- Main Content -->
-    <div class="container convert-to-persian">
-      {% block content %} {% endblock %}
+    <div class="container convert-to-persian">  <!-- Main container for the body content, with a class for potential styling -->
+        {% block content %}  <!-- Block for child templates to insert content -->
+        {% endblock %}
     </div>
 
-    <footer style="background-color: #222831; color: #eeeeee; padding: 20px 0">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 text-right">
-            <img
-              src="{% static 'images/medx_logo.png' %}"
-              alt="Logo"
-              class="footer-logo"
-            />
-            <p class="footer-description">
-              Medx یک پلتفرم رسانه منبع باز برای جامعه علوم پزشکی است که بتوانند
-              در دنیای فناوری سلامت کاوش کنند یاد بگیرند به اشتراک بگذارند و به
-              توسعه آن کمک کنند.
-            </p>
-          </div>
-
-          <div class="col-md-4 text-center">
-            <ul class="nav flex-column footer-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">خانه</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">نویسندگان</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">حساب کاربری</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#">مشارکت</a></li>
-            </ul>
-          </div>
-
-          <div class="col-md-4">
-            <div class="newsletter-container">
-              <form
-                method="post"
-                id="newsletter-form"
-                class="newsletter-form"
-                action="https://hooks.zapier.com/hooks/catch/20008026/2tqbika/"
-                target="hidden-frame"
-                onsubmit="handleFormSubmit();"
-              >
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control newsletter-email"
-                  placeholder="ایمیل خود را وارد کنید"
-                  required
-                />
-                <button type="submit" class="btn btn-primary newsletter-btn">
-                  عضویت<br />در خبرنامه
-                </button>
-              </form>
-              <iframe name="hidden-frame" style="display: none"></iframe>
+    <!-- Footer -->
+    <footer style="background-color: #222831; color: #EEEEEE; padding: 20px 0;">  <!-- Footer section with background color, text color, and padding -->
+        <div class="container">  <!-- Container for footer content -->
+            <div class="row">  <!-- Bootstrap row for layout -->
+                <div class="col-md-4 text-right">  <!-- Column for the logo and description -->
+                    <img src="{% static 'images/medx_logo.png' %}" alt="Logo" class="footer-logo">  <!-- Logo in the footer -->
+                    <p class="footer-description">Medx یک پلتفرم رسانه منبع باز برای جامعه علوم پزشکی است که بتوانند در دنیای فناوری سلامت کاوش کنند یاد بگیرند به اشتراک بگذارند و به توسعه آن کمک کنند.</p>  <!-- Footer description -->
+                </div>
+    
+                <div class="col-md-4 text-center">  <!-- Column for footer navigation -->
+                    <ul class="nav flex-column footer-nav">  <!-- Unordered list for footer links -->
+                        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">خانه</a></li>  <!-- Link to the home page -->
+                        <li class="nav-item"><a class="nav-link" href="#">نویسندگان</a></li>  <!-- Placeholder link for authors -->
+                        <li class="nav-item"><a class="nav-link" href="#">حساب کاربری</a></li>  <!-- Placeholder link for user account -->
+                        <li class="nav-item"><a class="nav-link" href="#">مشارکت</a></li>  <!-- Placeholder link for collaboration -->
+                    </ul>
+                </div>
+    
+                <div class="col-md-4">  <!-- Column for newsletter subscription -->
+                    <div class="newsletter-container">  <!-- Container for newsletter form -->
+                        <form method="post" id="newsletter-form" class="newsletter-form" action="https://hooks.zapier.com/hooks/catch/20008026/2tqbika/" target="hidden-frame" onsubmit="handleFormSubmit();">  <!-- Form for newsletter subscription -->
+                            <input type="email" name="email" class="form-control newsletter-email" placeholder="ایمیل خود را وارد کنید" required>  <!-- Email input field -->
+                            <button type="submit" class="btn btn-primary newsletter-btn">عضویت<br>در خبرنامه</button>  <!-- Submit button for the newsletter -->
+                        </form>
+                        <iframe name="hidden-frame" style="display:none;"></iframe>  <!-- Hidden iframe for form submission -->
+                    </div>                                                                                                                                                                                                                                                                
+                </div>
             </div>
           </div>
         </div>
@@ -142,19 +79,20 @@
     </footer>
 
     <script>
-      function handleFormSubmit() {
-        const pageReloaded = localStorage.getItem("pageReloaded");
-        if (!pageReloaded) {
-          localStorage.setItem("pageReloaded", "true");
-          setTimeout(() => {
-            window.location.reload();
-          }, 100);
+        function handleFormSubmit() {
+            const pageReloaded = localStorage.getItem('pageReloaded');  // Check if the page has been reloaded
+            if (!pageReloaded) {
+                localStorage.setItem('pageReloaded', 'true');  // Set a flag in local storage
+                setTimeout(() => {
+                    window.location.reload();  // Reload the page after a short delay
+                }, 100);
+            }
         }
       }
 
-      window.onload = function () {
-        localStorage.removeItem("pageReloaded");
-      };
+        window.onload = function() {
+            localStorage.removeItem('pageReloaded');  // Clear the reload flag on page load
+        };
     </script>
   </body>
 </html>
