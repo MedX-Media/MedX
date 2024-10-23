@@ -634,3 +634,18 @@ pre {
     text-align: inherit; /* تراز متن بر اساس والد */
     width: 100%;
 }
+
+/* Show overlay when active */
+.overlay.active {
+    display: block;
+}
+
+/* Search modal content */
+#searchModal .modal-dialog {
+    max-width: 600px;
+}
+
+#searchModal .modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+}
