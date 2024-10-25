@@ -33,7 +33,7 @@
                     <h4 class="home-popular-post-title">
                         <a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a> <!-- Title link to each popular post detail -->
                     </h4>
-                    <span class="home-popular-post-meta">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.publish_date|to_jalali|persian_numbers }} | بازدید: {{ post.views }}</span> <!-- Author name and publication date for each popular post -->
+                    <span class="home-popular-post-meta">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.publish_date|to_jalali|persian_numbers }} | بازدید: {{ post.views|persian_numbers }}</span> <!-- Author name and publication date for each popular post -->
                 </li>
             {% empty %}
                 <li>هیچ مطلب پربازدیدی وجود ندارد.</li>
