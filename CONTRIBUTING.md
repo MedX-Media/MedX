@@ -25,9 +25,58 @@ The spectrum of "whys" is vast, and your reason for contributing is valid, no ma
 You are free to contribute to the MedX open-source project based on your interests and abilities, wherever you "want" and "can".
 
 ### Want to contribute to website development?
-1. Fork the repository.
-2. Head over to the [issues section](https://github.com/MedX-Media/MedX/issues) and pick those labeled "development", and contribute to any issue you'd like.
-3. Consider Development Principles:
+1. Fork the repository  
+    Fork the repository to your own GitHub account to get started:
+    - Go to the [MedX repository](https://github.com/MedX-Media/MedX) on GitHub.
+    - Click the "Fork" button at the top of the page to create a copy of the repository in your GitHub account.
+2. Clone the Repository  
+    After forking the repository, clone it to your local machine so you can make changes:
+    ```
+    git clone https://github.com/YOUR_USERNAME/MedX.git
+    ```
+    Make sure to replace YOUR_USERNAME with your GitHub username.
+
+    - After cloning the Django project from GitHub, follow these steps to set up the project, create necessary content, and avoid potential issues due to an empty database:
+        1. Change directory to website code root  
+            ```
+            cd MedX\src\medx_website\
+            ```
+        2. Migrate the Database  
+        Since the database is not included in the repository, you need to apply migrations to set up the necessary database tables:  
+            ```
+            python manage.py migrate
+            ```
+        3. Create a Superuser  
+        Create a superuser to access the Django admin panel:  
+            ```
+            python manage.py createsuperuser
+            ```
+            You’ll be prompted to enter a username, email, and password. Remember these credentials for logging into the admin panel.  
+            
+        4. Run the Development Server  
+        After setting up the database and creating the superuser, start the Django development server:  
+            ```
+            python manage.py runserver
+            ```
+        5. Access the Admin Panel  
+        Open your browser and navigate to the admin login page:  
+            ```
+            http://127.0.0.1:8000/admin/
+            ```
+            Log in using the superuser credentials you created earlier.  
+
+        6. Create Necessary Content  
+        Once logged into the admin panel, create at least one post to ensure the website functions properly. This step is essential to avoid errors due to missing data on the home page or other sections.
+
+3. Head over to the [issues section](https://github.com/MedX-Media/MedX/issues)  
+    Browse the list of issues in the repository. Look for issues labeled "development," and choose the one you'd like to contribute to. Be sure to communicate your intent to work on an issue by commenting on it.
+4. Create a New Branch  
+    Before making any changes, create a new branch to work on. It’s a good practice to create a separate branch for each issue or feature:
+    ```
+    git checkout -b issue-name
+    ```
+    Replace issue-name with a descriptive name that relates to the issue or feature you’re working on.
+5. Consider Development Principles:
     - Programming:
         - Check out [MedX src directory](https://github.com/MedX-Media/MedX/tree/main/src)
         - Write clean and well-organized code as much as possible.
@@ -36,8 +85,27 @@ You are free to contribute to the MedX open-source project based on your interes
         - Check out [MedX design directory](https://github.com/MedX-Media/MedX/tree/main/design)
         - Design your ideas with any tools you want such as Figma, Photoshop, etc.
         - Put your output in the directory with a suitable file name.
-4. Once you've resolved an issue, submit a pull request from "your fork" to "MedX development branch", including a detailed explanation.
-That's it! You've contributed to MedX as a developer.
+6. Add and Commit Your Changes  
+    Once you've made the necessary changes, stage and commit them to your local repository:
+    ```
+    git add .
+    ```
+    ```
+    git commit -m "A brief description of your changes"
+    ```
+7. Push Changes to Your Fork  
+    Push your changes to the forked repository in your GitHub account:
+    ```
+    git push origin issue-name
+    ```
+8. Submit a Pull Request  
+    Once your changes are pushed to your fork, it's time to submit a pull request:
+    - Go to your forked repository on GitHub.
+    - Click the "Pull Request" button.
+    - Select the MedX `development` branch as the **base** and `your` branch as the **compare**.
+    - Write a detailed description of the changes you made, explaining how it resolves the issue or contributes to the project.
+    - Submit the pull request.
+9. That's it! You've contributed to MedX as a developer.
 
 ### Want to help with content creation?
 1. You can choose the topic! Just make sure it's related to health tech.
