@@ -46,3 +46,14 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class PostView(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    ip_address = models.GenericIPAddressField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('post', 'ip_address')  # Ensures one view per IP per post
+
+    def __str__(self):
+        return f"{self.ip_address} viewed {self.post.title}"
