@@ -24,13 +24,17 @@
     </div>
     <div class="col-md-6 home-popular-posts">
         <!-- Popular posts -->
-        <h3>پربازدیدترین مطالب</h3>
+        <h3>پربازدیدترین مطالب ماه</h3>
         <ul>
             {% for post in popular_posts %}
                 <li class="home-popular-list-group-item">
-                    <h4 class="home-popular-post-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h4>
-                    <span class="home-popular-post-meta">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.publish_date|to_jalali|persian_numbers }}</span>
+                    <h4 class="home-popular-post-title">
+                        <a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a>
+                    </h4>
+                    <span class="home-popular-post-meta">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.publish_date|to_jalali|persian_numbers }} | بازدید: {{ post.views }}</span>
                 </li>
+            {% empty %}
+                <li>هیچ مطلب پربازدیدی وجود ندارد.</li>
             {% endfor %}
         </ul>
     </div>
