@@ -1,6 +1,6 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Post
+from .models import Post, PostView
 import os
 import requests
 from django.http import JsonResponse
