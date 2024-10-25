@@ -23,10 +23,22 @@ def upload_image(request):
 
 def home(request):
     latest_post = Post.objects.latest('publish_date')
-    popular_posts = Post.objects.order_by('-read_time')[:3]
+
+    current_month = timezone.now().month
+    current_year = timezone.now().year
+
+    # Checking the availability of posts in the current month
+    popular_posts = Post.objects.filter(
+        publish_date__year=current_year,
+        publish_date__month=current_month
+    ).order_by('-views')[:3]
+
+    if not popular_posts:
+        popular_posts = Post.objects.order_by('-views')[:3]  # If no post found, based on views
 
     all_posts = Post.objects.order_by('-publish_date')
     paginator = Paginator(all_posts, 9)
+
 
     page_number = request.GET.get('page', 1)
 
