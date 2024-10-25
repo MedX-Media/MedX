@@ -37,6 +37,7 @@ class Post(models.Model):
     slug = models.SlugField(unique=True, max_length=200, blank=True)
     tags = models.ManyToManyField(Tag, blank=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
+    views = models.PositiveIntegerField(default=0)
 
     def save(self, *args, **kwargs):
         if not self.slug:
