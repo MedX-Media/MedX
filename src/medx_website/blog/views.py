@@ -75,3 +75,44 @@ def post_detail(request, slug):
 
     # Rendering the post detail page with the context data
     return render(request, 'blog/post_detail.html', context)
+
+def search_posts(request):
+    query = request.GET.get("q", "")
+    page = int(request.GET.get("page", 1))
+    results_per_page = 10  # Number of results per page
+    start = (page - 1) * results_per_page
+    end = start + results_per_page
+
+    # Filter posts by title
+    posts = Post.objects.filter(title__icontains=query)
+
+    total_results = posts.count()
+    total_pages = (
+        total_results + results_per_page - 1
+    ) // results_per_page  # Calculate the number of pages
+
+    # Return the current results and add the slug
+    current_results = posts[start:end].values(
+        "slug", "title", "featured_image", "publish_date", "author__username"
+    )
+
+    # Convert date to string format
+    response_data = {
+        "results": [
+            {
+                "slug": post["slug"],  # Adding slug to the results dictionary
+                "title": post["title"],
+                "featured_image": (
+                    post["featured_image"] if post["featured_image"] else None
+                ),  # Check for image existence
+                "publish_date": post["publish_date"].strftime(
+                    "%Y-%m-%d %H:%M:%S"
+                ),  # Change this line
+                "author_username": post["author__username"],
+            }
+            for post in current_results
+        ],
+        "total_pages": total_pages,
+    }
+
+    return JsonResponse(response_data)

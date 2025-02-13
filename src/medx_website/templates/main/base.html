@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{% static 'js/custom.js' %}"></script>
+
 </head>
 <body>
     <!-- Header Section -->
@@ -59,11 +60,13 @@
             <a class="navbar-brand" href="{% url 'home' %}">
                 <img src="{% static 'images/medx_logo.png' %}" alt="Logo">
             </a>
+          
             <!-- Toggle button for small screens -->
             <button class="navbar-toggler" type="button" id="menu-toggle">
                 <span>&#9776;</span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+
                 <!-- Menu items -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -76,7 +79,7 @@
                 <div class="nav-icon">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                            <a class="nav-link" href="#" id="open-search-modal"><i class="fas fa-search"></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
@@ -98,7 +101,31 @@
       </div>
     </div>
 
-    <!-- Main Content Area -->
+    <!-- Search Modal -->
+    <div class="modal" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <input type="text" id="searchInput" class="form-control" placeholder="جستجو..." onkeyup="searchPosts()">
+                    <button type="button" class="btn-close" id="close-search-modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchResults">
+                        <!-- Search results are shown here.-->
+                    </div>
+                    <div id="pagination"></div> <!-- To display pagination -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search results -->
+    <div id="search-results"></div>
+
+    <!-- Dark overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Main Content -->
     <div class="container convert-to-persian">
       {% block content %} {% endblock %}
     </div>
@@ -169,7 +196,7 @@
     <!-- jQuery Script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Toggle the side menu
         document.getElementById('menu-toggle').addEventListener('click', function() {
@@ -181,6 +208,58 @@
             document.getElementById('side-menu').classList.remove('open');
         });
 
+        // Open search modal
+        document.getElementById('open-search-modal').addEventListener('click', function() {
+            document.getElementById('searchModal').style.display = 'block';
+            document.getElementById('overlay').classList.add('active');
+        });
+
+        // Close search modal
+        document.getElementById('close-search-modal').addEventListener('click', function() {
+            document.getElementById('searchModal').style.display = 'none';
+            document.getElementById('overlay').classList.remove('active');
+        });
+
+        // Close modal when clicking on overlay
+        document.getElementById('overlay').addEventListener('click', function() {
+            document.getElementById('searchModal').style.display = 'none';
+            document.getElementById('overlay').classList.remove('active');
+        });
+
+        // Real-time search with AJAX
+        function searchPosts() {
+            const query = document.getElementById('searchInput').value;
+
+            fetch(`/search/?q=${query}`)
+                .then(response => response.json())
+                .then(data => {
+                    const resultsContainer = document.getElementById('searchResults');
+                    resultsContainer.innerHTML = '';  // Clear previous results
+
+                    data.results.forEach(post => {
+                        const postElement = document.createElement('div');
+                        postElement.classList.add('col-md-4', 'mb-4');  // Bootstrap classes for responsiveness and spacing
+
+                        // Creating HTML to display posts as cards
+                        postElement.innerHTML = `
+                            <div class="card h-100 shadow-sm">
+                                <img class="card-img-top" src="/media/${post.featured_image}" alt="${post.title}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${post.title}</h5>
+                                    <p class="card-text">
+                                        <p>${post.author_username}</p>
+                                        <p>${post.publish_date}</p>
+                                    </p>
+                                    <a href="/post/${post.slug}/" class="btn btn-primary">مطالعه بیشتر</a>
+                                </div>
+                            </div>
+                        `;
+                        resultsContainer.appendChild(postElement);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+      
         // Handle newsletter form submission
         function handleFormSubmit() {
             const pageReloaded = localStorage.getItem('pageReloaded');
@@ -221,21 +300,20 @@
             const codeBlocks = document.querySelectorAll("pre code");
         
             codeBlocks.forEach((block) => {
+
                 // Create a copy button
                 const copyButton = document.createElement("button");
                 copyButton.innerHTML = "Copy";
                 copyButton.className = "copy-code-btn";
                 
-                // Create a div to wrap the code and button
                 const codeWrapper = document.createElement("div");
                 codeWrapper.className = "code-wrapper";
         
-                // Add the code block and button to the wrapper
-                block.parentElement.insertBefore(codeWrapper, block);
                 codeWrapper.appendChild(block.parentElement.removeChild(block));
                 codeWrapper.appendChild(copyButton);
         
-                // When the copy button is clicked
+                block.parentElement.insertBefore(codeWrapper, block); // Insert the code wrapper before the block element
+
                 copyButton.addEventListener("click", () => {
                     const range = document.createRange();
                     range.selectNodeContents(block);
