@@ -1,6 +1,6 @@
-from django.urls import path  # Importing path to define URL patterns
-from . import views  # Importing all views from the current package
-from .views import upload_image  # Importing the specific upload_image view
+from django.urls import path
+from . import views
+from .views import upload_image, search_posts
 
 # URL patterns for the blog application
 urlpatterns = [

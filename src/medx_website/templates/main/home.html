@@ -27,15 +27,17 @@
     </div>
     <div class="col-md-6 home-popular-posts">
         <!-- Popular posts section -->
-        <h3>پربازدیدترین مطالب</h3>  <!-- Header for popular posts -->
+        <h3>پربازدیدترین مطالب ماه</h3> <!-- Header for popular posts -->
         <ul>
             {% for post in popular_posts %}
                 <li class="home-popular-list-group-item">
                     <h4 class="home-popular-post-title">
-                        <a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a>  <!-- Title link to each popular post detail -->
+                        <a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a> <!-- Title link to each popular post detail -->
                     </h4>
-                    <span class="home-popular-post-meta">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.publish_date|to_jalali|persian_numbers }}</span>  <!-- Author name and publication date for each popular post -->
+                    <span class="home-popular-post-meta">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.publish_date|to_jalali|persian_numbers }} | بازدید: {{ post.views|persian_numbers }}</span> <!-- Author name and publication date for each popular post -->
                 </li>
+            {% empty %}
+                <li>هیچ مطلب پربازدیدی وجود ندارد.</li>
             {% endfor %}
         </ul>
     </div>
