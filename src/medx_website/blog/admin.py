@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import Post, Tag, Category
-from .models import UserProfile
+
+from .models import Category, Post, Tag, UserProfile
+
 
 # Registering the UserProfile model with the admin interface
 @admin.register(UserProfile)
@@ -8,8 +9,10 @@ class UserProfileAdmin(admin.ModelAdmin):
     # Specifies the fields to be displayed in the admin list view
     list_display = ('user', 'profile_picture')
 
+
 # Admin configuration for the Post model
 class PostAdmin(admin.ModelAdmin):
+
     # Specifies the fields to display in the admin list view
     list_display = ('title', 'author', 'publish_date', 'category', 'read_time')
     # Adds filters for the admin list view
@@ -22,6 +25,7 @@ class PostAdmin(admin.ModelAdmin):
     # Custom queryset to filter posts based on user group
     def get_queryset(self, request):
         qs = super().get_queryset(request)
+
         # If the user is in the 'نویسنده' group, filter to show only their posts
         if request.user.groups.filter(name='نویسنده').exists():
             return qs.filter(author=request.user)

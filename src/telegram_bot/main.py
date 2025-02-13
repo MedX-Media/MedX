@@ -1,18 +1,19 @@
-import re
-import requests
 import json
+import re
 import time
+
+import requests
 
 # Define the bot token and the channel chat ID for sending messages via Telegram
 BOT_TOKEN = "<BOT_TOKEN>"
 CHANNEL_CHAT_ID = "-1002215464363"
 
 # URL to access the GitHub API for the specific repository's commits and issues
-REPO_URL_API = 'https://api.github.com/repos/MedX-Media/MedX/commits'
-REPO_URL_ISSUES = 'https://api.github.com/repos/MedX-Media/MedX/issues'
+REPO_URL_API = "https://api.github.com/repos/MedX-Media/MedX/commits"
+REPO_URL_ISSUES = "https://api.github.com/repos/MedX-Media/MedX/issues"
 
 # Personal GitHub token for authentication
-GITHUB_TOKEN = '<GITHUB_TOKEN>'
+GITHUB_TOKEN = "<GITHUB_TOKEN>"
 
 
 # Function to receive the latest data (commits or issues) from the GitHub API
@@ -34,7 +35,7 @@ def recive_last_data(api_url, github_token):
 
 # Save the data to a local JSON file
 def save_json_to_file(data, filename):
-    with open(filename, 'w') as json_file:
+    with open(filename, "w") as json_file:
         json.dump(data, json_file, indent=4)
 
 
@@ -70,7 +71,6 @@ def extract_issue_info(issue_data):
 def escape_markdown(text):
     escape_chars = r'\*_`\[\]()~>#+-=|{}.!'  # Characters to be escaped in Markdown
     return re.sub(r'([%s])' % re.escape(escape_chars), r'\\\1', text)
-
 
 # Format the commit message to be sent to Telegram
 def format_commit_message(info):
@@ -145,4 +145,3 @@ while True:
 
     # Wait for a specific amount of time before checking again (e.g., 60 seconds)
     time.sleep(60)  # Pause for 60 seconds between checks
-
