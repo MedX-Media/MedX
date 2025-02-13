@@ -1,0 +1,35 @@
+name: Deploy Django Project
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup SSH Connection
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to Server
+        run: |
+          ssh -i ~/.ssh/id_ed25519 root@${{ secrets.SERVER_IP }} << 'EOF'
+            cd /root/Medx/Website/MedX
+            git pull origin main
+            source src/medx_website/venv/bin/activate
+            pip install -r src/medx_website/requirements.txt
+            cd src/medx_website
+            python manage.py migrate
+            python manage.py collectstatic --noinput
+            systemctl restart medx
+            systemctl restart nginx
+          EOF
