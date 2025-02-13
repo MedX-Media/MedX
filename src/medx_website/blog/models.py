@@ -40,6 +40,7 @@ class Post(models.Model):
     slug = models.SlugField(unique=True, max_length=200, blank=True)  # Unique slug for the post
     tags = models.ManyToManyField(Tag, blank=True)  # Many-to-many relationship with Tag model
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)  # Foreign key to Category model
+    views = models.PositiveIntegerField(default=0) # Stores the number of views for the post, initialized to 0
 
     # Overriding the save method to auto-generate slug and calculate read time
     def save(self, *args, **kwargs):
@@ -50,4 +51,15 @@ class Post(models.Model):
         super().save(*args, **kwargs)  # Call the superclass's save method
 
     def __str__(self):
-        return self.title  # Returns the post title for string representation
+        return self.title # Returns the post title for string representation
+
+class PostView(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    ip_address = models.GenericIPAddressField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('post', 'ip_address')  # Ensures one view per IP per post
+
+    def __str__(self):
+        return f"{self.ip_address} viewed {self.post.title}"

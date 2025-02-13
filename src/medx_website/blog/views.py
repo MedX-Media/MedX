@@ -1,6 +1,6 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger  # Importing pagination classes
 from django.shortcuts import render, get_object_or_404, redirect  # Importing rendering and object retrieval functions
-from .models import Post  # Importing the Post model
+from .models import Post, PostView  # Importing the Post model
 import os  # Importing os for file path manipulation
 import requests  # Importing requests for HTTP requests (not used in the code, can be removed if unnecessary)
 from django.http import JsonResponse  # Importing JsonResponse for returning JSON data
@@ -10,6 +10,7 @@ from django.core.files.storage import default_storage  # Importing default stora
 from django.core.files.base import ContentFile  # Importing ContentFile for saving file content
 
 @csrf_exempt  # Exempting this view from CSRF verification for image uploads
+
 def upload_image(request):
     if request.method == 'POST':  # Checking if the request method is POST
         if request.FILES.get('file'):  # Checking if a file was uploaded
@@ -29,8 +30,18 @@ def upload_image(request):
 def home(request):
     # Fetching the latest post by publish date
     latest_post = Post.objects.latest('publish_date')
-    # Fetching the three most popular posts based on read time
-    popular_posts = Post.objects.order_by('-read_time')[:3]
+
+    current_month = timezone.now().month
+    current_year = timezone.now().year
+
+    # Checking the availability of posts in the current month
+    popular_posts = Post.objects.filter(
+        publish_date__year=current_year,
+        publish_date__month=current_month
+    ).order_by('-views')[:3]
+
+    if not popular_posts:
+        popular_posts = Post.objects.order_by('-views')[:3]  # If no post found, based on views
 
     # Fetching all posts, ordered by publish date
     all_posts = Post.objects.order_by('-publish_date')
